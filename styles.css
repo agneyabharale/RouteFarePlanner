@@ -55,15 +55,18 @@ body {
   top: 0; left: 0; right: 0;
   z-index: 200;
   height: 62px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  background: rgba(255,255,255,0.78);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,0.9);
-  box-shadow: 0 1px 12px rgba(0,0,0,0.05);
+
+  background: transparent;        /* 🔥 main change */
+  backdrop-filter: none;          /* remove blur */
+  -webkit-backdrop-filter: none;
+
+  border-bottom: none;            /* remove line */
+  box-shadow: none;               /* remove glow */
 }
 
 .nav-brand {
@@ -426,16 +429,20 @@ body {
 .pref-pill {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 7px 20px;
-  border-radius: var(--radius-pill);
+  gap: 8px;
+
+  padding: 10px 24px;      /* 🔥 bigger size */
+  border-radius: 999px;
+
   border: 1.5px solid rgba(200,200,220,0.55);
   background: rgba(255,255,255,0.75);
-  font-family: inherit;
-  font-size: 0.87rem;
+
+  font-size: 1rem;         /* 🔥 bigger text */
   font-weight: 600;
+
   color: var(--text-secondary);
   cursor: pointer;
+
   transition: all 0.18s;
   white-space: nowrap;
 }
@@ -470,6 +477,11 @@ body {
 .pref-icon {
   display: flex;
   align-items: center;
+}
+
+.pref-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 /* ══ MAIN CONTENT AREA ══ */

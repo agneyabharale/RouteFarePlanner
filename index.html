@@ -1,11 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoutePlanner — Plan Smart. Travel Better.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar">
+    <a href="#" class="nav-brand">
+      <div class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="white"/>
+        </svg>
+      </div>
+      <span class="brand-name">RoutePlanner</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link active">Home</a></li>
+      <li><a href="#" class="nav-link">Explore</a></li>
+      <li><a href="#" class="nav-link">Hotels</a></li>
+      <li><a href="#" class="nav-link">Routes</a></li>
+      <li><a href="#" class="nav-link">Offers</a></li>
+      <li><a href="#" class="nav-link">About</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="icon-btn" title="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+      <button class="lang-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        EN
+      </button>
+      <button class="signin-btn">Sign In</button>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+
+    <!-- Bus + Metro line-drawing background -->
+    <div class="hero-bg">
+      <svg class="bg-svg" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- ── LEFT SIDE: Bus stop + Bus ── -->
+        <!-- Bus stop pole -->
+        <rect x="68" y="200" width="5" height="340" rx="2" fill="#8B9FC8" opacity="0.55"/>
+        <!-- Bus stop sign -->
+        <rect x="40" y="195" width="62" height="38" rx="6" fill="none" stroke="#8B9FC8" stroke-width="2" opacity="0.6"/>
+        <text x="71" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#8B9FC8" font-weight="600" opacity="0.7">BUS</text>
+        <text x="71" y="222" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#8B9FC8" font-weight="600" opacity="0.7">STOP</text>
+        <!-- Shelter roof -->
+        <rect x="30" y="240" width="100" height="8" rx="3" fill="#8B9FC8" opacity="0.35"/>
+        <rect x="32" y="248" width="4" height="80" rx="2" fill="#8B9FC8" opacity="0.3"/>
+        <rect x="126" y="248" width="4" height="80" rx="2" fill="#8B9FC8" opacity="0.3"/>
+        <rect x="32" y="248" width="98" height="60" rx="0" fill="none" stroke="#8B9FC8" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.25"/>
+
+        <!-- Bus (outline/line-art style) -->
+        <g opacity="0.7">
+          <!-- Bus body -->
+          <rect x="20" y="350" width="185" height="90" rx="10" fill="none" stroke="#8B9FC8" stroke-width="2.5"/>
+          <!-- Bus front bumper -->
+          <rect x="20" y="420" width="185" height="12" rx="5" fill="none" stroke="#8B9FC8" stroke-width="2"/>
+          <!-- Bus roof stripe -->
+          <rect x="20" y="350" width="185" height="18" rx="9" fill="none" stroke="#8B9FC8" stroke-width="2"/>
+          <!-- Windows top row -->
+          <rect x="32" y="360" width="30" height="18" rx="4" fill="none" stroke="#8B9FC8" stroke-width="1.8"/>
+          <rect x="70" y="360" width="30" height="18" rx="4" fill="none" stroke="#8B9FC8" stroke-width="1.8"/>
+          <rect x="108" y="360" width="30" height="18" rx="4" fill="none" stroke="#8B9FC8" stroke-width="1.8"/>
+          <rect x="146" y="360" width="30" height="18" rx="4" fill="none" stroke="#8B9FC8" stroke-width="1.8"/>
+          <!-- Door -->
+          <rect x="28" y="385" width="28" height="38" rx="4" fill="none" stroke="#8B9FC8" stroke-width="1.8"/>
+          <line x1="42" y1="385" x2="42" y2="423" stroke="#8B9FC8" stroke-width="1.2" opacity="0.5"/>
+          <!-- Windshield -->
+          <rect x="154" y="378" width="42" height="32" rx="5" fill="none" stroke="#8B9FC8" stroke-width="2"/>
+          <!-- Wheels -->
+          <circle cx="55" cy="440" r="16" fill="none" stroke="#8B9FC8" stroke-width="2.5"/>
+          <circle cx="55" cy="440" r="7" fill="none" stroke="#8B9FC8" stroke-width="1.5"/>
+          <circle cx="160" cy="440" r="16" fill="none" stroke="#8B9FC8" stroke-width="2.5"/>
+          <circle cx="160" cy="440" r="7" fill="none" stroke="#8B9FC8" stroke-width="1.5"/>
+          <!-- Headlight -->
+          <rect x="196" y="388" width="10" height="8" rx="2" fill="none" stroke="#8B9FC8" stroke-width="1.8"/>
+          <!-- Route board -->
+          <rect x="70" y="352" width="70" height="12" rx="3" fill="none" stroke="#8B9FC8" stroke-width="1.5"/>
+        </g>
+
+        <!-- ── LEFT CITY BUILDINGS ── -->
+        <g opacity="0.3" stroke="#8B9FC8" stroke-width="1.5" fill="none">
+          <rect x="250" y="280" width="45" height="260"/>
+          <rect x="258" y="292" width="10" height="14" rx="1"/>
+          <rect x="274" y="292" width="10" height="14" rx="1"/>
+          <rect x="258" y="316" width="10" height="14" rx="1"/>
+          <rect x="274" y="316" width="10" height="14" rx="1"/>
+          <rect x="258" y="340" width="10" height="14" rx="1"/>
+          <rect x="274" y="340" width="10" height="14" rx="1"/>
+
+          <rect x="300" y="220" width="60" height="320"/>
+          <line x1="330" y1="220" x2="330" y2="200"/>
+          <circle cx="330" cy="196" r="5" stroke="#8B9FC8" stroke-width="1.5"/>
+          <rect x="310" y="234" width="12" height="16" rx="1"/>
+          <rect x="328" y="234" width="12" height="16" rx="1"/>
+          <rect x="346" y="234" width="12" height="16" rx="1"/>
+          <rect x="310" y="262" width="12" height="16" rx="1"/>
+          <rect x="328" y="262" width="12" height="16" rx="1"/>
+          <rect x="346" y="262" width="12" height="16" rx="1"/>
+          <rect x="310" y="290" width="12" height="16" rx="1"/>
+          <rect x="328" y="290" width="12" height="16" rx="1"/>
+          <rect x="346" y="290" width="12" height="16" rx="1"/>
+
+          <rect x="368" y="310" width="38" height="230"/>
+          <rect x="376" y="322" width="9" height="12" rx="1"/>
+          <rect x="391" y="322" width="9" height="12" rx="1"/>
+          <rect x="376" y="346" width="9" height="12" rx="1"/>
+          <rect x="391" y="346" width="9" height="12" rx="1"/>
+        </g>
+
+        <!-- ── DASHED ROUTE PATH ── -->
+        <path d="M 150 560 Q 400 520 650 540 Q 900 560 1150 520 Q 1300 505 1430 530"
+          stroke="#8B9FC8" stroke-width="2" stroke-dasharray="12 8" fill="none" opacity="0.35"/>
+
+        <!-- Route location pins -->
+        <g opacity="0.6">
+          <!-- Pin 1 -->
+          <circle cx="280" cy="178" r="6" fill="none" stroke="#4F7EE0" stroke-width="2.5"/>
+          <circle cx="280" cy="178" r="2.5" fill="#4F7EE0"/>
+          <line x1="280" y1="184" x2="280" y2="200" stroke="#4F7EE0" stroke-width="2" stroke-dasharray="3 3"/>
+
+          <!-- Pin 2 -->
+          <circle cx="1032" cy="198" r="8" fill="none" stroke="#E05050" stroke-width="2.5"/>
+          <circle cx="1032" cy="198" r="3" fill="#E05050"/>
+          <line x1="1032" y1="206" x2="1032" y2="224" stroke="#E05050" stroke-width="2" stroke-dasharray="3 3"/>
+        </g>
+
+        <!-- ── RIGHT SIDE: Metro elevated track + Train ── -->
+        <!-- Track pillars -->
+        <rect x="1080" y="340" width="8" height="210" rx="2" fill="#8B9FC8" opacity="0.4"/>
+        <rect x="1200" y="330" width="8" height="220" rx="2" fill="#8B9FC8" opacity="0.4"/>
+        <rect x="1320" y="335" width="8" height="215" rx="2" fill="#8B9FC8" opacity="0.4"/>
+        <rect x="1400" y="340" width="8" height="210" rx="2" fill="#8B9FC8" opacity="0.4"/>
+
+        <!-- Pillar cross-beams -->
+        <rect x="1075" y="338" width="22" height="6" rx="3" fill="#8B9FC8" opacity="0.4"/>
+        <rect x="1195" y="328" width="22" height="6" rx="3" fill="#8B9FC8" opacity="0.4"/>
+        <rect x="1315" y="333" width="22" height="6" rx="3" fill="#8B9FC8" opacity="0.4"/>
+        <rect x="1395" y="338" width="22" height="6" rx="3" fill="#8B9FC8" opacity="0.4"/>
+
+        <!-- Elevated rail beam -->
+        <rect x="1060" y="332" width="380" height="10" rx="3" fill="none" stroke="#8B9FC8" stroke-width="2" opacity="0.5"/>
+        <!-- Rail top line -->
+        <line x1="1060" y1="334" x2="1440" y2="334" stroke="#8B9FC8" stroke-width="1.5" opacity="0.4"/>
+        <line x1="1060" y1="340" x2="1440" y2="340" stroke="#8B9FC8" stroke-width="1.5" opacity="0.4"/>
+
+        <!-- Metro train (line-art) -->
+        <g opacity="0.7" stroke="#8B9FC8" fill="none">
+          <!-- Train body -->
+          <rect x="1090" y="280" width="320" height="55" rx="8" stroke-width="2.5"/>
+          <!-- Train nose (left) -->
+          <path d="M1090 280 Q1072 280 1070 307 Q1072 334 1090 335" stroke-width="2.5"/>
+          <!-- Windows -->
+          <rect x="1098" y="290" width="28" height="17" rx="4" stroke-width="1.8"/>
+          <rect x="1136" y="290" width="28" height="17" rx="4" stroke-width="1.8"/>
+          <rect x="1174" y="290" width="28" height="17" rx="4" stroke-width="1.8"/>
+          <rect x="1212" y="290" width="28" height="17" rx="4" stroke-width="1.8"/>
+          <rect x="1250" y="290" width="28" height="17" rx="4" stroke-width="1.8"/>
+          <rect x="1288" y="290" width="28" height="17" rx="4" stroke-width="1.8"/>
+          <rect x="1326" y="290" width="28" height="17" rx="4" stroke-width="1.8"/>
+          <rect x="1364" y="290" width="28" height="17" rx="4" stroke-width="1.8"/>
+          <!-- Bottom stripe line -->
+          <line x1="1090" y1="326" x2="1410" y2="326" stroke-width="1.5"/>
+          <!-- Headlight -->
+          <rect x="1068" y="302" width="8" height="6" rx="2" stroke-width="1.5"/>
+        </g>
+
+        <!-- RIGHT city buildings -->
+        <g opacity="0.28" stroke="#8B9FC8" stroke-width="1.5" fill="none">
+          <rect x="1090" y="200" width="50" height="280"/>
+          <rect x="1100" y="214" width="11" height="15" rx="1"/>
+          <rect x="1118" y="214" width="11" height="15" rx="1"/>
+          <rect x="1100" y="240" width="11" height="15" rx="1"/>
+          <rect x="1118" y="240" width="11" height="15" rx="1"/>
+          <rect x="1100" y="266" width="11" height="15" rx="1"/>
+          <rect x="1118" y="266" width="11" height="15" rx="1"/>
+
+          <rect x="1150" y="240" width="42" height="240"/>
+          <rect x="1158" y="252" width="10" height="13" rx="1"/>
+          <rect x="1174" y="252" width="10" height="13" rx="1"/>
+          <rect x="1158" y="276" width="10" height="13" rx="1"/>
+          <rect x="1174" y="276" width="10" height="13" rx="1"/>
+
+          <rect x="1210" y="260" width="35" height="220"/>
+          <rect x="1218" y="272" width="8" height="11" rx="1"/>
+          <rect x="1232" y="272" width="8" height="11" rx="1"/>
+          <rect x="1218" y="295" width="8" height="11" rx="1"/>
+          <rect x="1232" y="295" width="8" height="11" rx="1"/>
+
+          <!-- Trees right side -->
+          <circle cx="1455" cy="490" r="22" stroke-width="1.5"/>
+          <line x1="1455" y1="512" x2="1455" y2="545" stroke-width="1.5"/>
+          <circle cx="1430" cy="505" r="15" stroke-width="1.5"/>
+          <line x1="1430" y1="520" x2="1430" y2="545" stroke-width="1.5"/>
+        </g>
+
+        <!-- Trees left side -->
+        <g opacity="0.28" stroke="#8B9FC8" stroke-width="1.5" fill="none">
+          <circle cx="430" cy="490" r="20"/>
+          <line x1="430" y1="510" x2="430" y2="545"/>
+          <circle cx="458" cy="502" r="14"/>
+          <line x1="458" y1="516" x2="458" y2="545"/>
+        </g>
+
+        <!-- Ground line -->
+        <line x1="0" y1="548" x2="1440" y2="548" stroke="#8B9FC8" stroke-width="1.5" opacity="0.3"/>
+
+      </svg>
+    </div>
+
+    <!-- Hero text — top right -->
+    <div class="hero-text-wrap">
+      <h1 class="hero-title">
+        Discover routes,  <br>
+        <span class="hero-title-gradient">stays &amp; experiences.</span>
+      </h1>
+      <p class="hero-subtitle">Find the best routes, compare fares, and explore amazing<br>stops and stays on the way.</p>
+    </div>
+
+    <!-- Search card — glassmorph -->
+    <div class="search-card-wrap">
+      <div class="search-card">
+        <div class="search-row">
+          <!-- From -->
+          <div class="search-field">
+            <div class="field-icon from-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#5B6CF6"><circle cx="12" cy="12" r="5"/></svg>
+            </div>
+            <div class="field-body">
+              <label class="field-label">From</label>
+              <input class="field-input" id="from-input" type="text" placeholder="Enter source location" />
+            </div>
+          </div>
+
+          <!-- Swap -->
+          <button class="swap-btn" id="swap-btn" title="Swap locations">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7AE8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 7h14"/>
+              <path d="M14 3l4 4-4 4"/>
+              <path d="M20 17H6"/>
+              <path d="M10 21l-4-4 4-4"/>
+              </svg>
+          </button>
+
+          <!-- To -->
+          <div class="search-field">
+            <div class="field-icon to-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF5C5C"><circle cx="12" cy="12" r="5"/></svg>
+            </div>
+            <div class="field-body">
+              <label class="field-label">To</label>
+              <input class="field-input" id="to-input" type="text" placeholder="Enter destination" />
+            </div>
+          </div>
+
+          <!-- Plan Route button -->
+          <button class="plan-btn" id="plan-btn">
+            Plan Route
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <!-- Preference pills -->
+        <div class="pref-row">
+          <button class="pref-pill cheap active" data-pref="cheap">
+            <span class="pref-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#10B981"><rect x="2" y="5" width="20" height="14" rx="3" fill="none" stroke="#10B981" stroke-width="2"/><path d="M12 9v6M9 12h6" stroke="#10B981" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            Cheap
+          </button>
+          <button class="pref-pill fastest" data-pref="fastest">
+            <span class="pref-icon">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#7C3AED"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="#7C3AED"/></svg>
+            </span>
+            Fastest
+          </button>
+          <button class="pref-pill comfy" data-pref="comfy">
+            <span class="pref-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" fill="#F59E0B"/></svg>
+            </span>
+            Comfy
+          </button>
+          <button class="pref-pill all" data-pref="all">
+            <span class="pref-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
+            </span>
+            All Options
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══ MAIN ══ -->
+  <main class="main">
+
+    <!-- Recommended Stays -->
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">Recommended Stays &amp; Spots</h2>
+        <a href="#" class="view-all">View all</a>
+      </div>
+      <div class="stays-row" id="stays-row"></div>
+    </section>
+
+    <!-- Three columns -->
+    <div class="three-col">
+
+      <!-- Popular Routes -->
+      <div class="info-card">
+        <div class="section-head">
+          <h2 class="section-title">Popular Routes</h2>
+          <a href="#" class="view-all">View all</a>
+        </div>
+        <div id="popular-routes"></div>
+      </div>
+
+      <!-- Recent Searches -->
+      <div class="info-card">
+        <div class="section-head">
+          <h2 class="section-title">Your Recent Searches</h2>
+          <a href="#" class="view-all">View all</a>
+        </div>
+        <div id="recent-searches"></div>
+      </div>
+
+      <!-- Recent Routes -->
+      <div class="info-card">
+        <div class="section-head">
+          <h2 class="section-title">Your Recent Routes</h2>
+          <a href="#" class="view-all">View all</a>
+        </div>
+        <div id="recent-routes"></div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>

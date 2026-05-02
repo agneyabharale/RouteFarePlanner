@@ -7,12 +7,12 @@
 /* ── DATA ── */
 
 const STAYS = [
-  { name: 'Ocean View Resort',     loc: 'Goa, India',             rating: 4.6, price: '₹2,499', bg: '#DBEAFE', emoji: '🏖️' },
-  { name: 'Mountain Bliss Hostel', loc: 'Manali, Himachal',       rating: 4.3, price: '₹799',   bg: '#D1FAE5', emoji: '🏔️' },
-  { name: 'City Center Stay',      loc: 'Bangalore, Karnataka',   rating: 4.5, price: '₹1,299', bg: '#EDE9FE', emoji: '🌆' },
-  { name: 'Backpacker Hostel',     loc: 'Rishikesh, Uttarakhand', rating: 4.2, price: '₹599',   bg: '#FEF3C7', emoji: '🏕️' },
-  { name: 'Beachside Villa',       loc: 'Pondicherry',            rating: 4.7, price: '₹2,199', bg: '#CFFAFE', emoji: '🌊' },
-  { name: 'Heritage Stay',         loc: 'Jaipur, Rajasthan',      rating: 4.4, price: '₹1,899', bg: '#FCE7F3', emoji: '🏰' },
+  { name: 'Ocean View Resort', loc: 'Goa, India', rating: 4.6, price: '₹2,499', img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop' },
+  { name: 'Mountain Bliss Hostel', loc: 'Manali, Himachal', rating: 4.3, price: '₹799', img: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470' },
+  { name: 'City Center Stay', loc: 'Bangalore, Karnataka', rating: 4.5, price: '₹1,299', img: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267' },
+  { name: 'Backpacker Hostel', loc: 'Rishikesh, Uttarakhand', rating: 4.2, price: '₹599', img: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa' },
+  { name: 'Beachside Villa', loc: 'Pondicherry', rating: 4.7, price: '₹2,199', img: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85' },
+  { name: 'Heritage Stay', loc: 'Jaipur, Rajasthan', rating: 4.4, price: '₹1,899', img: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791' },
 ];
 
 const POPULAR_ROUTES = [
@@ -59,7 +59,7 @@ function renderStays() {
   container.innerHTML = STAYS.map((s, i) => `
     <div class="stay-card" style="animation: fadeUp 0.45s ease ${0.05 * i}s both">
       <div class="stay-img-wrap">
-        <div class="stay-img-placeholder" style="background:${s.bg};">${s.emoji}</div>
+        <img src="${s.img}" class="stay-img" />
         <button class="stay-fav-btn" data-fav="false" aria-label="Favourite">🤍</button>
       </div>
       <div class="stay-info">

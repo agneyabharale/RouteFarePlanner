@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RouteWise - Results</title>
   <link rel="stylesheet" href="results.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -13,7 +15,7 @@
        NAVBAR
   ================================================= -->
   <nav class="navbar">
-    <div class="navbar-logo">
+    <a href="index.html" class="navbar-logo" style="text-decoration: none;">
       <div class="logo-icon">
         <svg width="28" height="32" viewBox="0 0 28 32" fill="none">
           <path d="M14 0C8.477 0 4 4.477 4 10c0 7.5 10 18 10 18S24 17.5 24 10c0-5.523-4.477-10-10-10z" fill="#6366f1"/>
@@ -26,7 +28,7 @@
         <span class="logo-name">RouteWise</span>
         <span class="logo-subtitle">Smart Multimodal Route Planner</span>
       </div>
-    </div>
+    </a>
 
     <div class="navbar-search">
       <div class="search-box">
@@ -135,112 +137,7 @@
       <!-- Map Container -->
       <div class="map-container" id="map">
 
-        <!-- Static map background - SVG representation of Pune -->
-        <div class="map-bg">
-
-          <!-- City area blocks -->
-          <div class="city-block" style="top:5%;left:55%;width:18%;height:12%;background:#e8f4f0;border-radius:4px;opacity:0.5"></div>
-          <div class="city-block" style="top:20%;left:30%;width:55%;height:30%;background:#f0f4e8;border-radius:4px;opacity:0.4"></div>
-          <div class="city-block" style="top:35%;left:15%;width:25%;height:20%;background:#e8f0f4;border-radius:4px;opacity:0.4"></div>
-
-          <!-- Roads (horizontal) -->
-          <div class="road road-h" style="top:35%;left:0;width:100%;height:3px"></div>
-          <div class="road road-h" style="top:55%;left:0;width:100%;height:2px;opacity:0.4"></div>
-          <div class="road road-h" style="top:72%;left:0;width:100%;height:2px;opacity:0.3"></div>
-
-          <!-- Roads (vertical) -->
-          <div class="road road-v" style="top:0;left:38%;width:2px;height:100%"></div>
-          <div class="road road-v" style="top:0;left:60%;width:2px;height:50%;opacity:0.4"></div>
-          <div class="road road-v" style="top:30%;left:72%;width:2px;height:70%;opacity:0.3"></div>
-
-          <!-- Diagonal road -->
-          <div class="road-diag"></div>
-
-          <!-- City Labels -->
-          <span class="map-city-label" style="top:6%;left:62%">Yerwada</span>
-          <span class="map-city-label" style="top:10%;left:76%">Kalyani Nagar</span>
-          <span class="map-city-label" style="top:20%;left:64%">Shivaji Nagar</span>
-          <span class="map-city-label" style="top:20%;left:78%">Bund Garden</span>
-          <span class="map-city-label" style="top:33%;left:80%">Koregaon Park</span>
-          <span class="map-city-label" style="top:33%;left:91%">Mundhwa</span>
-          <span class="map-city-label" style="top:18%;left:12%">Pashan</span>
-          <span class="map-city-label" style="top:46%;left:10%">Warje</span>
-          <span class="map-city-label" style="top:48%;left:36%">Deccan Gymkhana</span>
-          <span class="map-city-label" style="top:46%;left:80%">Hadapur</span>
-          <span class="map-city-label" style="top:38%;left:91%">Aundh</span>
-          <span class="map-city-label" style="top:62%;left:50%">Karve Nagar</span>
-          <span class="map-city-label" style="top:74%;left:14%">Hinjewadi</span>
-          <span class="map-city-label" style="top:83%;left:8%">Bhumkar Chowk</span>
-          <span class="map-city-label" style="top:82%;left:58%">Wakad</span>
-        </div>
-
-        <!-- ── ROUTE LINES ── -->
-
-        <!-- Bus Route: Pune Station → Shivajinagar (green dashed) -->
-        <svg class="route-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <!-- Bus line -->
-          <path d="M 30 18 Q 36 28 40 36" stroke="#16a34a" stroke-width="0.8" fill="none" stroke-dasharray="2,1.5" stroke-linecap="round"/>
-          <!-- Metro line -->
-          <path d="M 40 36 Q 44 45 46 54 Q 48 62 52 68" stroke="#2563eb" stroke-width="0.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- Walk line -->
-          <path d="M 52 68 Q 58 70 64 72" stroke="#9ca3af" stroke-width="0.6" fill="none" stroke-dasharray="1.5,1.5" stroke-linecap="round"/>
-          <!-- Cab line -->
-          <path d="M 64 72 Q 72 76 80 80" stroke="#d97706" stroke-width="0.9" fill="none" stroke-linecap="round"/>
-        </svg>
-
-        <!-- ── MARKERS ── -->
-
-        <!-- Start: Pune Station -->
-        <div class="marker marker-start" style="top:15%;left:27%">
-          <div class="marker-blob blue-blob">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 9h18" stroke="white" stroke-width="1.5" fill="none"/><circle cx="7.5" cy="15" r="1" fill="white"/><circle cx="16.5" cy="15" r="1" fill="white"/></svg>
-          </div>
-          <div class="marker-popup">Pune Station</div>
-        </div>
-
-        <!-- Pune Railway Station label -->
-        <div class="map-area-label" style="top:24%;left:10%">Pune Railway<br>Station</div>
-
-        <!-- Bus stop dots -->
-        <div class="route-dot bus-dot" style="top:27%;left:34%"></div>
-        <div class="route-dot bus-dot" style="top:33%;left:37%"></div>
-
-        <!-- Metro stop dots -->
-        <div class="route-dot metro-dot" style="top:41%;left:43%"></div>
-        <div class="route-dot metro-dot" style="top:50%;left:45%"></div>
-        <div class="route-dot metro-dot" style="top:58%;left:47%"></div>
-
-        <!-- Walk marker -->
-        <div class="marker marker-walk" style="top:67%;left:51%">
-          <div class="walk-blob">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2"><circle cx="12" cy="4" r="1.5" fill="#6b7280"/><path d="M9 8l2 2 2-4 3 2M9 14l1 6M13 14l2 6"/></svg>
-          </div>
-        </div>
-
-        <!-- End: Hinjewadi Phase 1 -->
-        <div class="marker marker-end" style="top:76%;left:77%">
-          <div class="marker-pin">
-            <svg width="20" height="24" viewBox="0 0 20 24" fill="none"><path d="M10 0C4.477 0 0 4.477 0 10c0 7.5 10 14 10 14S20 17.5 20 10C20 4.477 15.523 0 10 0z" fill="#ef4444"/><circle cx="10" cy="10" r="4" fill="white"/></svg>
-          </div>
-          <div class="marker-popup popup-right">Hinjewadi Phase 1</div>
-        </div>
-
-        <!-- Floating info cards -->
-        <div class="map-info-card" style="top:28%;left:42%">
-          <span class="map-card-name bus-name">Bus 23</span>
-          <span class="map-card-detail">12 min · 8 stops</span>
-        </div>
-
-        <div class="map-info-card" style="top:50%;left:53%">
-          <span class="map-card-name metro-name">Metro Blue Line</span>
-          <span class="map-card-detail">20 min · 11 stops</span>
-        </div>
-
-        <div class="map-info-card walk-card" style="top:63%;left:60%">
-          <span class="map-card-name">Walk</span>
-          <span class="map-card-detail">5 min · 350 m</span>
-        </div>
-
+        <div id="leaflet-map" style="position: absolute; inset: 0; z-index: 1;"></div>
         <!-- Map Controls -->
         <div class="map-controls">
           <button class="map-ctrl layers-ctrl">

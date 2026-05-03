@@ -9,7 +9,7 @@ const ICONS = {
   bus: `<svg width="14" height="14" viewBox="0 0 24 24" fill="white"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 9h18M7 17v2M17 17v2" stroke="white" stroke-width="1.5" fill="none"/><circle cx="7.5" cy="15" r="1" fill="white"/><circle cx="16.5" cy="15" r="1" fill="white"/></svg>`,
   metro: `<svg width="14" height="14" viewBox="0 0 24 24" fill="white"><rect x="4" y="3" width="16" height="15" rx="2"/><path d="M4 9h16M8 18v2M16 18v2" stroke="white" stroke-width="1.5" fill="none"/><circle cx="8.5" cy="14" r="1" fill="white"/><circle cx="15.5" cy="14" r="1" fill="white"/></svg>`,
   walk: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2"><circle cx="12" cy="4" r="1.5" fill="#6b7280"/><path d="M9 8l2 2 2-4 3 2M9 14l1 6M13 14l2 6M9 8l-2 6h4l2-4"/></svg>`,
-  cab:  `<svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M5 11l2-5h10l2 5"/><rect x="3" y="11" width="18" height="7" rx="2"/><circle cx="7.5" cy="18" r="2" fill="white"/><circle cx="16.5" cy="18" r="2" fill="white"/></svg>`,
+  cab: `<svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M5 11l2-5h10l2 5"/><rect x="3" y="11" width="18" height="7" rx="2"/><circle cx="7.5" cy="18" r="2" fill="white"/><circle cx="16.5" cy="18" r="2" fill="white"/></svg>`,
   info: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>`,
 };
 
@@ -18,78 +18,78 @@ const PANEL_DATA = {
 
   cheapest: {
     // ── Card meta ──
-    label:     'Cheapest',
-    badge:     1,
-    badgeCls:  'badge-green',
+    label: 'Cheapest',
+    badge: 1,
+    badgeCls: 'badge-green',
     headerCls: 'green-header',
     borderCls: 'green-card',
-    fareCls:   'green-fare',
-    fare:      '₹60',
-    time:      '45 min',
-    meta:      '2 transfers · 18.7 km',
+    fareCls: 'green-fare',
+    fare: '₹60',
+    time: '45 min',
+    meta: '2 transfers · 18.7 km',
     // ── Why banner ──
     why: {
-      text:   'This is the cheapest route based on current bus, metro and cab fares.',
-      pill1:  { color: '#16a34a', icon: '✓', text: 'Saves ₹22 compared to fastest route', cls: 'green-pill' },
-      pill2:  { text: 'Adds 13 min more', cls: 'grey-pill' },
+      text: 'This is the cheapest route based on current bus, metro and cab fares.',
+      pill1: { color: '#16a34a', icon: '✓', text: 'Saves ₹22 compared to fastest route', cls: 'green-pill' },
+      pill2: { text: 'Adds 13 min more', cls: 'grey-pill' },
     },
     // ── Steps ──
     steps: [
-      { type: 'bus',   circleCls: 'bus-circle',   lineCls: 'bus-line',   dur: '12 min', name: 'Bus 23',          route: 'Pune Station (Platform 2) → Shivajinagar',  sub: '8 stops',  fare: '₹15', detail: '🕐 12 min · 🛑 8 stops · 💵 ₹15',         hasLine: true  },
-      { type: 'metro', circleCls: 'metro-circle', lineCls: 'metro-line', dur: '20 min', name: 'Metro Blue Line', route: 'Shivajinagar Metro → Phase 1 (Hinjewadi)',   sub: '11 stops', fare: '₹30', detail: '🕐 20 min · 🛑 11 stops · 💵 ₹30',        hasLine: true  },
-      { type: 'walk',  circleCls: 'walk-circle',  lineCls: 'walk-line',  dur: '5 min',  name: 'Walk',            route: 'Phase 1 Metro Station → Pickup Point',       sub: '350 m',    fare: '₹0',  detail: '',                                          hasLine: true  },
-      { type: 'cab',   circleCls: 'cab-circle',   lineCls: '',           dur: '8 min',  name: 'Cab (Auto/Taxi)', route: 'Pickup Point → Hinjewadi Phase 1',           sub: '3.2 km',   fare: '₹15', detail: '🕐 8 min · 📏 3.2 km · 💵 ₹15',            hasLine: false },
+      { type: 'bus', circleCls: 'bus-circle', lineCls: 'bus-line', dur: '12 min', name: 'Bus 23', route: 'Pune Station (Platform 2) → Shivajinagar', sub: '8 stops', fare: '₹15', detail: '🕐 12 min · 🛑 8 stops · 💵 ₹15', hasLine: true },
+      { type: 'metro', circleCls: 'metro-circle', lineCls: 'metro-line', dur: '20 min', name: 'Metro Blue Line', route: 'Shivajinagar Metro → Phase 1 (Hinjewadi)', sub: '11 stops', fare: '₹30', detail: '🕐 20 min · 🛑 11 stops · 💵 ₹30', hasLine: true },
+      { type: 'walk', circleCls: 'walk-circle', lineCls: 'walk-line', dur: '5 min', name: 'Walk', route: 'Phase 1 Metro Station → Pickup Point', sub: '350 m', fare: '₹0', detail: '', hasLine: true },
+      { type: 'cab', circleCls: 'cab-circle', lineCls: '', dur: '8 min', name: 'Cab (Auto/Taxi)', route: 'Pickup Point → Hinjewadi Phase 1', sub: '3.2 km', fare: '₹15', detail: '🕐 8 min · 📏 3.2 km · 💵 ₹15', hasLine: false },
     ],
     // ── Map ──
     map: {
       segments: [
-        { d: 'M 30 18 Q 36 28 40 36',                       stroke: '#16a34a', dash: '2,1.5',   width: 0.9 },
-        { d: 'M 40 36 Q 44 46 46 55 Q 48 63 52 68',        stroke: '#2563eb', dash: '',         width: 1.0 },
-        { d: 'M 52 68 Q 58 70 64 72',                       stroke: '#9ca3af', dash: '1.5,1.5', width: 0.7 },
-        { d: 'M 64 72 Q 72 76 80 80',                       stroke: '#d97706', dash: '',         width: 1.0 },
+        { d: 'M 30 18 Q 36 28 40 36', stroke: '#16a34a', dash: '2,1.5', width: 0.9 },
+        { d: 'M 40 36 Q 44 46 46 55 Q 48 63 52 68', stroke: '#2563eb', dash: '', width: 1.0 },
+        { d: 'M 52 68 Q 58 70 64 72', stroke: '#9ca3af', dash: '1.5,1.5', width: 0.7 },
+        { d: 'M 64 72 Q 72 76 80 80', stroke: '#d97706', dash: '', width: 1.0 },
       ],
       dots: [
-        { top: '27%', left: '34%', cls: 'bus-dot'   },
-        { top: '33%', left: '37%', cls: 'bus-dot'   },
+        { top: '27%', left: '34%', cls: 'bus-dot' },
+        { top: '33%', left: '37%', cls: 'bus-dot' },
         { top: '41%', left: '43%', cls: 'metro-dot' },
         { top: '50%', left: '45%', cls: 'metro-dot' },
         { top: '58%', left: '47%', cls: 'metro-dot' },
       ],
       cards: [
-        { top: '28%', left: '42%', name: 'Bus 23',          color: '#16a34a', detail: '12 min · 8 stops'  },
+        { top: '28%', left: '42%', name: 'Bus 23', color: '#16a34a', detail: '12 min · 8 stops' },
         { top: '50%', left: '53%', name: 'Metro Blue Line', color: '#2563eb', detail: '20 min · 11 stops' },
-        { top: '63%', left: '61%', name: 'Walk',            color: '#6b7280', detail: '5 min · 350 m'     },
+        { top: '63%', left: '61%', name: 'Walk', color: '#6b7280', detail: '5 min · 350 m' },
       ],
       endPos: { top: '76%', left: '77%' },
-      stats:  { fare: '₹60', time: '45 min', transfers: '2', distance: '18.7 km' },
+      stats: { fare: '₹60', time: '45 min', transfers: '2', distance: '18.7 km' },
     },
     // ── Other cards shown collapsed below ──
     others: ['fastest', 'comfortable', 'all'],
   },
 
   fastest: {
-    label:     'Fastest',
-    badge:     1,
-    badgeCls:  'badge-purple',
+    label: 'Fastest',
+    badge: 1,
+    badgeCls: 'badge-purple',
     headerCls: 'purple-header',
     borderCls: 'purple-card',
-    fareCls:   'purple-fare',
-    fare:      '₹82',
-    time:      '32 min',
-    meta:      '1 transfer · 16.4 km',
+    fareCls: 'purple-fare',
+    fare: '₹82',
+    time: '32 min',
+    meta: '1 transfer · 16.4 km',
     why: {
-      text:  'Fastest route using Metro Express directly to Phase 1, then a short cab ride.',
+      text: 'Fastest route using Metro Express directly to Phase 1, then a short cab ride.',
       pill1: { color: '#7c3aed', icon: '⚡', text: 'Saves 13 min vs cheapest route', cls: 'purple-pill' },
       pill2: { text: 'Costs ₹22 more', cls: 'grey-pill' },
     },
     steps: [
-      { type: 'metro', circleCls: 'metro-circle', lineCls: 'metro-line', dur: '22 min', name: 'Metro Express',  route: 'Pune Station Metro → Phase 1 (Hinjewadi)',  sub: '9 stops',  fare: '₹52', detail: '🕐 22 min · 🛑 9 stops · 💵 ₹52',  hasLine: true  },
-      { type: 'cab',   circleCls: 'cab-circle',   lineCls: '',           dur: '10 min', name: 'Cab (OLA)',      route: 'Phase 1 Station → Hinjewadi Phase 1',       sub: '4.1 km',   fare: '₹30', detail: '🕐 10 min · 📏 4.1 km · 💵 ₹30', hasLine: false },
+      { type: 'metro', circleCls: 'metro-circle', lineCls: 'metro-line', dur: '22 min', name: 'Metro Express', route: 'Pune Station Metro → Phase 1 (Hinjewadi)', sub: '9 stops', fare: '₹52', detail: '🕐 22 min · 🛑 9 stops · 💵 ₹52', hasLine: true },
+      { type: 'cab', circleCls: 'cab-circle', lineCls: '', dur: '10 min', name: 'Cab (OLA)', route: 'Phase 1 Station → Hinjewadi Phase 1', sub: '4.1 km', fare: '₹30', detail: '🕐 10 min · 📏 4.1 km · 💵 ₹30', hasLine: false },
     ],
     map: {
       segments: [
-        { d: 'M 30 18 Q 38 30 48 46 Q 54 57 58 65', stroke: '#2563eb', dash: '',   width: 1.1 },
-        { d: 'M 58 65 Q 68 70 80 75',               stroke: '#d97706', dash: '',   width: 1.0 },
+        { d: 'M 30 18 Q 38 30 48 46 Q 54 57 58 65', stroke: '#2563eb', dash: '', width: 1.1 },
+        { d: 'M 58 65 Q 68 70 80 75', stroke: '#d97706', dash: '', width: 1.0 },
       ],
       dots: [
         { top: '30%', left: '36%', cls: 'metro-dot' },
@@ -99,39 +99,39 @@ const PANEL_DATA = {
       ],
       cards: [
         { top: '38%', left: '44%', name: 'Metro Express', color: '#2563eb', detail: '22 min · 9 stops' },
-        { top: '62%', left: '62%', name: 'Cab (OLA)',      color: '#d97706', detail: '10 min · 4.1 km' },
+        { top: '62%', left: '62%', name: 'Cab (OLA)', color: '#d97706', detail: '10 min · 4.1 km' },
       ],
       endPos: { top: '72%', left: '78%' },
-      stats:  { fare: '₹82', time: '32 min', transfers: '1', distance: '16.4 km' },
+      stats: { fare: '₹82', time: '32 min', transfers: '1', distance: '16.4 km' },
     },
     others: ['cheapest', 'comfortable', 'all'],
   },
 
   comfortable: {
-    label:     'Most Comfortable',
-    badge:     1,
-    badgeCls:  'badge-amber',
+    label: 'Most Comfortable',
+    badge: 1,
+    badgeCls: 'badge-amber',
     headerCls: 'amber-header',
     borderCls: 'amber-card',
-    fareCls:   'amber-fare',
-    fare:      '₹95',
-    time:      '38 min',
-    meta:      '1 transfer · 17.6 km',
+    fareCls: 'amber-fare',
+    fare: '₹95',
+    time: '38 min',
+    meta: '1 transfer · 17.6 km',
     why: {
-      text:  'AC Bus all the way with fewer stops, then a short auto ride. Most comfortable experience.',
+      text: 'AC Bus all the way with fewer stops, then a short auto ride. Most comfortable experience.',
       pill1: { color: '#d97706', icon: '😊', text: 'AC bus · no crowding · 1 seat change', cls: 'amber-pill' },
       pill2: { text: 'Costs ₹35 more than cheapest', cls: 'grey-pill' },
     },
     steps: [
-      { type: 'bus',  circleCls: 'bus-circle',  lineCls: 'bus-line',  dur: '28 min', name: 'AC Bus 156',  route: 'Pune Station → Hinjewadi Phase 1 Gate',   sub: '12 stops', fare: '₹80', detail: '🕐 28 min · 🛑 12 stops · ❄️ AC · 💵 ₹80', hasLine: true  },
-      { type: 'walk', circleCls: 'walk-circle', lineCls: 'walk-line', dur: '6 min',  name: 'Walk',         route: 'Bus Stop → Pickup Point',                 sub: '400 m',    fare: '₹0',  detail: '',                                              hasLine: true  },
-      { type: 'cab',  circleCls: 'cab-circle',  lineCls: '',          dur: '4 min',  name: 'Auto',         route: 'Pickup Point → Hinjewadi Phase 1',        sub: '1.2 km',   fare: '₹15', detail: '🕐 4 min · 📏 1.2 km · 💵 ₹15',               hasLine: false },
+      { type: 'bus', circleCls: 'bus-circle', lineCls: 'bus-line', dur: '28 min', name: 'AC Bus 156', route: 'Pune Station → Hinjewadi Phase 1 Gate', sub: '12 stops', fare: '₹80', detail: '🕐 28 min · 🛑 12 stops · ❄️ AC · 💵 ₹80', hasLine: true },
+      { type: 'walk', circleCls: 'walk-circle', lineCls: 'walk-line', dur: '6 min', name: 'Walk', route: 'Bus Stop → Pickup Point', sub: '400 m', fare: '₹0', detail: '', hasLine: true },
+      { type: 'cab', circleCls: 'cab-circle', lineCls: '', dur: '4 min', name: 'Auto', route: 'Pickup Point → Hinjewadi Phase 1', sub: '1.2 km', fare: '₹15', detail: '🕐 4 min · 📏 1.2 km · 💵 ₹15', hasLine: false },
     ],
     map: {
       segments: [
-        { d: 'M 30 18 Q 32 30 34 40 Q 36 52 40 60 Q 46 68 56 72', stroke: '#16a34a', dash: '3,1.5',   width: 1.1 },
-        { d: 'M 56 72 Q 65 74 74 77',                              stroke: '#9ca3af', dash: '1.5,1.5', width: 0.7 },
-        { d: 'M 74 77 Q 78 78 80 79',                              stroke: '#d97706', dash: '',         width: 1.0 },
+        { d: 'M 30 18 Q 32 30 34 40 Q 36 52 40 60 Q 46 68 56 72', stroke: '#16a34a', dash: '3,1.5', width: 1.1 },
+        { d: 'M 56 72 Q 65 74 74 77', stroke: '#9ca3af', dash: '1.5,1.5', width: 0.7 },
+        { d: 'M 74 77 Q 78 78 80 79', stroke: '#d97706', dash: '', width: 1.0 },
       ],
       dots: [
         { top: '30%', left: '32%', cls: 'bus-dot' },
@@ -141,50 +141,50 @@ const PANEL_DATA = {
       ],
       cards: [
         { top: '40%', left: '34%', name: 'AC Bus 156', color: '#16a34a', detail: '28 min · 12 stops' },
-        { top: '67%', left: '58%', name: 'Walk',        color: '#6b7280', detail: '6 min · 400 m'    },
-        { top: '74%', left: '73%', name: 'Auto',        color: '#d97706', detail: '4 min · 1.2 km'   },
+        { top: '67%', left: '58%', name: 'Walk', color: '#6b7280', detail: '6 min · 400 m' },
+        { top: '74%', left: '73%', name: 'Auto', color: '#d97706', detail: '4 min · 1.2 km' },
       ],
       endPos: { top: '77%', left: '78%' },
-      stats:  { fare: '₹95', time: '38 min', transfers: '1', distance: '17.6 km' },
+      stats: { fare: '₹95', time: '38 min', transfers: '1', distance: '17.6 km' },
     },
     others: ['cheapest', 'fastest', 'all'],
   },
 
   all: {
-    label:     'All Options',
-    badge:     1,
-    badgeCls:  'badge-blue',
+    label: 'All Options',
+    badge: 1,
+    badgeCls: 'badge-blue',
     headerCls: 'blue-header',
     borderCls: 'blue-card',
-    fareCls:   'blue-fare',
-    fare:      '₹60–₹120',
-    time:      '32–50 min',
-    meta:      '6 routes available',
+    fareCls: 'blue-fare',
+    fare: '₹60–₹120',
+    time: '32–50 min',
+    meta: '6 routes available',
     why: {
-      text:  'All possible routes from Pune Station to Hinjewadi Phase 1, sorted by your preference.',
+      text: 'All possible routes from Pune Station to Hinjewadi Phase 1, sorted by your preference.',
       pill1: { color: '#2563eb', icon: '📋', text: '6 routes compared in real-time', cls: 'blue-pill' },
       pill2: { text: 'Prices vary by time of day', cls: 'grey-pill' },
     },
     // Show a comparison table instead of steps
     steps: [
-      { type: 'bus',   circleCls: 'bus-circle',   lineCls: 'bus-line',   dur: '45 min', name: 'Bus + Metro + Cab',    route: 'Cheapest option',      sub: '2 transfers', fare: '₹60', detail: '🏆 Best value · 18.7 km total', hasLine: true  },
-      { type: 'metro', circleCls: 'metro-circle', lineCls: 'metro-line', dur: '32 min', name: 'Metro Express + Cab',  route: 'Fastest option',       sub: '1 transfer',  fare: '₹82', detail: '⚡ Quickest · 16.4 km total',  hasLine: true  },
-      { type: 'bus',   circleCls: 'bus-circle',   lineCls: 'bus-line',   dur: '38 min', name: 'AC Bus + Auto',        route: 'Most comfortable',     sub: '1 transfer',  fare: '₹95', detail: '😊 AC bus · 17.6 km total',    hasLine: true  },
-      { type: 'cab',   circleCls: 'cab-circle',   lineCls: '',           dur: '28 min', name: 'Direct Cab (OLA)',     route: 'Most expensive option',sub: '0 transfers', fare: '₹320',detail: '🚗 Door to door · 18.2 km',    hasLine: false },
+      { type: 'bus', circleCls: 'bus-circle', lineCls: 'bus-line', dur: '45 min', name: 'Bus + Metro + Cab', route: 'Cheapest option', sub: '2 transfers', fare: '₹60', detail: '🏆 Best value · 18.7 km total', hasLine: true },
+      { type: 'metro', circleCls: 'metro-circle', lineCls: 'metro-line', dur: '32 min', name: 'Metro Express + Cab', route: 'Fastest option', sub: '1 transfer', fare: '₹82', detail: '⚡ Quickest · 16.4 km total', hasLine: true },
+      { type: 'bus', circleCls: 'bus-circle', lineCls: 'bus-line', dur: '38 min', name: 'AC Bus + Auto', route: 'Most comfortable', sub: '1 transfer', fare: '₹95', detail: '😊 AC bus · 17.6 km total', hasLine: true },
+      { type: 'cab', circleCls: 'cab-circle', lineCls: '', dur: '28 min', name: 'Direct Cab (OLA)', route: 'Most expensive option', sub: '0 transfers', fare: '₹320', detail: '🚗 Door to door · 18.2 km', hasLine: false },
     ],
     map: {
       segments: [
-        { d: 'M 30 18 Q 36 28 40 36',                              stroke: '#16a34a', dash: '2,1.5',   width: 0.7, opacity: 0.5 },
-        { d: 'M 40 36 Q 44 46 46 55 Q 48 63 52 68',               stroke: '#2563eb', dash: '',         width: 0.7, opacity: 0.5 },
-        { d: 'M 52 68 Q 58 70 64 72',                              stroke: '#9ca3af', dash: '1.5,1.5', width: 0.5, opacity: 0.5 },
-        { d: 'M 64 72 Q 72 76 80 80',                              stroke: '#d97706', dash: '',         width: 0.7, opacity: 0.5 },
-        { d: 'M 30 18 Q 38 30 48 46 Q 54 57 58 65',               stroke: '#7c3aed', dash: '',         width: 0.7, opacity: 0.5 },
-        { d: 'M 58 65 Q 68 70 80 75',                              stroke: '#d97706', dash: '',         width: 0.7, opacity: 0.5 },
-        { d: 'M 30 18 Q 32 34 34 48 Q 36 58 42 66 Q 52 72 62 74', stroke: '#16a34a', dash: '3,1.5',   width: 0.7, opacity: 0.5 },
-        { d: 'M 62 74 Q 70 76 80 78',                              stroke: '#d97706', dash: '',         width: 0.7, opacity: 0.5 },
+        { d: 'M 30 18 Q 36 28 40 36', stroke: '#16a34a', dash: '2,1.5', width: 0.7, opacity: 0.5 },
+        { d: 'M 40 36 Q 44 46 46 55 Q 48 63 52 68', stroke: '#2563eb', dash: '', width: 0.7, opacity: 0.5 },
+        { d: 'M 52 68 Q 58 70 64 72', stroke: '#9ca3af', dash: '1.5,1.5', width: 0.5, opacity: 0.5 },
+        { d: 'M 64 72 Q 72 76 80 80', stroke: '#d97706', dash: '', width: 0.7, opacity: 0.5 },
+        { d: 'M 30 18 Q 38 30 48 46 Q 54 57 58 65', stroke: '#7c3aed', dash: '', width: 0.7, opacity: 0.5 },
+        { d: 'M 58 65 Q 68 70 80 75', stroke: '#d97706', dash: '', width: 0.7, opacity: 0.5 },
+        { d: 'M 30 18 Q 32 34 34 48 Q 36 58 42 66 Q 52 72 62 74', stroke: '#16a34a', dash: '3,1.5', width: 0.7, opacity: 0.5 },
+        { d: 'M 62 74 Q 70 76 80 78', stroke: '#d97706', dash: '', width: 0.7, opacity: 0.5 },
       ],
       dots: [
-        { top: '30%', left: '34%', cls: 'bus-dot'   },
+        { top: '30%', left: '34%', cls: 'bus-dot' },
         { top: '42%', left: '44%', cls: 'metro-dot' },
         { top: '55%', left: '48%', cls: 'metro-dot' },
       ],
@@ -192,7 +192,7 @@ const PANEL_DATA = {
         { top: '22%', left: '42%', name: '6 Routes Available', color: '#2563eb', detail: 'Tap to compare' },
       ],
       endPos: { top: '76%', left: '77%' },
-      stats:  { fare: '₹60–₹320', time: '28–50 min', transfers: '0–2', distance: '16–19 km' },
+      stats: { fare: '₹60–₹320', time: '28–50 min', transfers: '0–2', distance: '16–19 km' },
     },
     others: ['cheapest', 'fastest', 'comfortable'],
   },
@@ -200,18 +200,18 @@ const PANEL_DATA = {
 
 // ── Collapsed card data (for the "other" cards below) ────
 const COLLAPSED_META = {
-  cheapest:    { badge: 'badge-green',  label: 'Cheapest',          meta: '2 transfers · 18.7 km', fare: '₹60',  fareCls: 'green-fare',  time: '45 min', timeCls: '' },
-  fastest:     { badge: 'badge-purple', label: 'Fastest',           meta: '1 transfer · 16.4 km',  fare: '₹82',  fareCls: 'purple-fare', time: '32 min', timeCls: 'purple-time' },
-  comfortable: { badge: 'badge-amber',  label: 'Most Comfortable',  meta: '1 transfer · 17.6 km',  fare: '₹95',  fareCls: 'amber-fare',  time: '38 min', timeCls: 'amber-time'  },
-  all:         { badge: 'badge-blue',   label: 'All Options',       meta: 'Compare all 6 routes',   fare: '',     fareCls: '',            time: '',       timeCls: '' },
+  cheapest: { badge: 'badge-green', label: 'Cheapest', meta: '2 transfers · 18.7 km', fare: '₹60', fareCls: 'green-fare', time: '45 min', timeCls: '' },
+  fastest: { badge: 'badge-purple', label: 'Fastest', meta: '1 transfer · 16.4 km', fare: '₹82', fareCls: 'purple-fare', time: '32 min', timeCls: 'purple-time' },
+  comfortable: { badge: 'badge-amber', label: 'Most Comfortable', meta: '1 transfer · 17.6 km', fare: '₹95', fareCls: 'amber-fare', time: '38 min', timeCls: 'amber-time' },
+  all: { badge: 'badge-blue', label: 'All Options', meta: 'Compare all 6 routes', fare: '', fareCls: '', time: '', timeCls: '' },
 };
 
 // ── Tab color classes ─────────────────────────────────────
 const TAB_COLOR_CLASS = {
-  cheapest:    'tab-active-green',
-  fastest:     'tab-active-purple',
+  cheapest: 'tab-active-green',
+  fastest: 'tab-active-purple',
   comfortable: 'tab-active-amber',
-  all:         'tab-active-blue',
+  all: 'tab-active-blue',
 };
 
 let activeTab = 'cheapest';
@@ -229,7 +229,7 @@ function renderPanel(tabId) {
   const container = document.getElementById('route-cards-scroll');
   if (!container) return;
 
-  container.style.opacity    = '0';
+  container.style.opacity = '0';
   container.style.transition = 'opacity 0.2s ease';
 
   setTimeout(() => {
@@ -276,9 +276,9 @@ function buildExpandedCard(tabId, data) {
 
 // ── Build a single step row ───────────────────────────────
 function buildStepRow(step, index, tabId) {
-  const isWalk    = step.type === 'walk';
-  const isFree    = step.fare === '₹0';
-  const stepId    = `step-${tabId}-${index}`;
+  const isWalk = step.type === 'walk';
+  const isFree = step.fare === '₹0';
+  const stepId = `step-${tabId}-${index}`;
   const hasDetail = step.detail !== '';
 
   return `
@@ -310,7 +310,7 @@ function buildStepRow(step, index, tabId) {
 function buildCollapsedCard(id) {
   const m = COLLAPSED_META[id];
   const chevron = `<svg class="card-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>`;
-  const arrow   = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>`;
+  const arrow = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>`;
 
   return `
     <div class="route-card collapsed" id="card-${id}">
@@ -399,80 +399,164 @@ function switchTab(el, tabId) {
 // ============================================================
 //  MAP FUNCTIONS
 // ============================================================
+
+const LATLNG_DATA = {
+  cheapest: {
+    segments: [
+      { latlngs: [[18.5284, 73.8743], [18.5300, 73.8600], [18.5314, 73.8446]] },
+      { latlngs: [[18.5314, 73.8446], [18.5413, 73.8282], [18.5626, 73.8087], [18.5590, 73.7868], [18.5987, 73.7607], [18.5910, 73.7400]] },
+      { latlngs: [[18.5910, 73.7400], [18.5900, 73.7390]] },
+      { latlngs: [[18.5900, 73.7390], [18.5905, 73.7388]] }
+    ],
+    markers: [
+      { pos: [18.5284, 73.8743], html: `<div class="marker" style="position:absolute; top:0; left:0;"><div class="marker-blob blue-blob"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 9h18" stroke="white" stroke-width="1.5" fill="none"/><circle cx="7.5" cy="15" r="1" fill="white"/><circle cx="16.5" cy="15" r="1" fill="white"/></svg></div><div class="marker-popup">Pune Station</div></div>` },
+      { pos: [18.5300, 73.8600], cls: 'route-dot bus-dot' },
+      { pos: [18.5314, 73.8446], cls: 'route-dot bus-dot' },
+      { pos: [18.5413, 73.8282], cls: 'route-dot metro-dot' },
+      { pos: [18.5626, 73.8087], cls: 'route-dot metro-dot' },
+      { pos: [18.5987, 73.7607], cls: 'route-dot metro-dot' },
+      { pos: [18.5910, 73.7400], html: `<div class="marker" style="position:absolute; top:0; left:0;"><div class="walk-blob"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2"><circle cx="12" cy="4" r="1.5" fill="#6b7280"/><path d="M9 8l2 2 2-4 3 2M9 14l1 6M13 14l2 6"/></svg></div></div>` },
+      { pos: [18.5905, 73.7388], html: `<div class="marker" style="position:absolute; top:0; left:0;"><div class="marker-pin"><svg width="20" height="24" viewBox="0 0 20 24" fill="none"><path d="M10 0C4.477 0 0 4.477 0 10c0 7.5 10 14 10 14S20 17.5 20 10C20 4.477 15.523 0 10 0z" fill="#ef4444"/><circle cx="10" cy="10" r="4" fill="white"/></svg></div><div class="marker-popup popup-right">Hinjewadi Phase 1</div></div>` }
+    ],
+    cards: [
+      { pos: [18.5300, 73.8600], html: `<div class="map-info-card" style="position:absolute; top:0; left:10px;"><span class="map-card-name bus-name">Bus 23</span><span class="map-card-detail">12 min · 8 stops</span></div>` },
+      { pos: [18.5626, 73.8087], html: `<div class="map-info-card" style="position:absolute; top:0; left:10px;"><span class="map-card-name metro-name">Metro Blue Line</span><span class="map-card-detail">20 min · 11 stops</span></div>` },
+      { pos: [18.5910, 73.7400], html: `<div class="map-info-card walk-card" style="position:absolute; top:0; left:10px;"><span class="map-card-name">Walk</span><span class="map-card-detail">5 min · 350 m</span></div>` }
+    ]
+  },
+  fastest: {
+    segments: [
+      { latlngs: [[18.5284, 73.8743], [18.5413, 73.8282], [18.5626, 73.8087], [18.5910, 73.7400]] },
+      { latlngs: [[18.5910, 73.7400], [18.5905, 73.7388]] }
+    ],
+    markers: [
+      { pos: [18.5284, 73.8743], html: `<div class="marker" style="position:absolute; top:0; left:0;"><div class="marker-blob blue-blob"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 9h18" stroke="white" stroke-width="1.5" fill="none"/><circle cx="7.5" cy="15" r="1" fill="white"/><circle cx="16.5" cy="15" r="1" fill="white"/></svg></div><div class="marker-popup">Pune Station</div></div>` },
+      { pos: [18.5413, 73.8282], cls: 'route-dot metro-dot' },
+      { pos: [18.5626, 73.8087], cls: 'route-dot metro-dot' },
+      { pos: [18.5910, 73.7400], html: `<div class="marker" style="position:absolute; top:0; left:0;"><div class="walk-blob"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2"><circle cx="12" cy="4" r="1.5" fill="#6b7280"/><path d="M9 8l2 2 2-4 3 2M9 14l1 6M13 14l2 6"/></svg></div></div>` },
+      { pos: [18.5905, 73.7388], html: `<div class="marker" style="position:absolute; top:0; left:0;"><div class="marker-pin"><svg width="20" height="24" viewBox="0 0 20 24" fill="none"><path d="M10 0C4.477 0 0 4.477 0 10c0 7.5 10 14 10 14S20 17.5 20 10C20 4.477 15.523 0 10 0z" fill="#ef4444"/><circle cx="10" cy="10" r="4" fill="white"/></svg></div><div class="marker-popup popup-right">Hinjewadi Phase 1</div></div>` }
+    ],
+    cards: [
+      { pos: [18.5413, 73.8282], html: `<div class="map-info-card" style="position:absolute; top:0; left:10px;"><span class="map-card-name metro-name">Metro Express</span><span class="map-card-detail">22 min · 9 stops</span></div>` },
+      { pos: [18.5910, 73.7400], html: `<div class="map-info-card" style="position:absolute; top:0; left:10px;"><span class="map-card-name" style="color:#d97706">Cab (OLA)</span><span class="map-card-detail">10 min · 4.1 km</span></div>` }
+    ]
+  },
+  comfortable: {
+    segments: [
+      { latlngs: [[18.5284, 73.8743], [18.5413, 73.8282], [18.5626, 73.8087], [18.5910, 73.7400]] },
+      { latlngs: [[18.5910, 73.7400], [18.5900, 73.7390]] },
+      { latlngs: [[18.5900, 73.7390], [18.5905, 73.7388]] }
+    ],
+    markers: [
+      { pos: [18.5284, 73.8743], html: `<div class="marker" style="position:absolute; top:0; left:0;"><div class="marker-blob blue-blob"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 9h18" stroke="white" stroke-width="1.5" fill="none"/><circle cx="7.5" cy="15" r="1" fill="white"/><circle cx="16.5" cy="15" r="1" fill="white"/></svg></div><div class="marker-popup">Pune Station</div></div>` },
+      { pos: [18.5413, 73.8282], cls: 'route-dot bus-dot' },
+      { pos: [18.5626, 73.8087], cls: 'route-dot bus-dot' },
+      { pos: [18.5910, 73.7400], cls: 'route-dot bus-dot' },
+      { pos: [18.5900, 73.7390], html: `<div class="marker" style="position:absolute; top:0; left:0;"><div class="walk-blob"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2"><circle cx="12" cy="4" r="1.5" fill="#6b7280"/><path d="M9 8l2 2 2-4 3 2M9 14l1 6M13 14l2 6"/></svg></div></div>` },
+      { pos: [18.5905, 73.7388], html: `<div class="marker" style="position:absolute; top:0; left:0;"><div class="marker-pin"><svg width="20" height="24" viewBox="0 0 20 24" fill="none"><path d="M10 0C4.477 0 0 4.477 0 10c0 7.5 10 14 10 14S20 17.5 20 10C20 4.477 15.523 0 10 0z" fill="#ef4444"/><circle cx="10" cy="10" r="4" fill="white"/></svg></div><div class="marker-popup popup-right">Hinjewadi Phase 1</div></div>` }
+    ],
+    cards: [
+      { pos: [18.5413, 73.8282], html: `<div class="map-info-card" style="position:absolute; top:0; left:10px;"><span class="map-card-name bus-name">AC Bus 156</span><span class="map-card-detail">28 min · 12 stops</span></div>` },
+      { pos: [18.5910, 73.7400], html: `<div class="map-info-card walk-card" style="position:absolute; top:0; left:10px;"><span class="map-card-name">Walk</span><span class="map-card-detail">6 min · 400 m</span></div>` },
+      { pos: [18.5900, 73.7390], html: `<div class="map-info-card" style="position:absolute; top:0; left:10px;"><span class="map-card-name" style="color:#d97706">Auto</span><span class="map-card-detail">4 min · 1.2 km</span></div>` }
+    ]
+  },
+  all: {
+    segments: [
+      { latlngs: [[18.5284, 73.8743], [18.5300, 73.8600], [18.5314, 73.8446]], opacity: 0.5 },
+      { latlngs: [[18.5314, 73.8446], [18.5413, 73.8282], [18.5626, 73.8087], [18.5590, 73.7868], [18.5987, 73.7607], [18.5910, 73.7400]], opacity: 0.5 },
+      { latlngs: [[18.5910, 73.7400], [18.5900, 73.7390]], opacity: 0.5 },
+      { latlngs: [[18.5900, 73.7390], [18.5905, 73.7388]], opacity: 0.5 },
+      { latlngs: [[18.5284, 73.8743], [18.5413, 73.8282], [18.5626, 73.8087], [18.5910, 73.7400]], opacity: 0.5 },
+      { latlngs: [[18.5910, 73.7400], [18.5905, 73.7388]], opacity: 0.5 }
+    ],
+    markers: [
+      { pos: [18.5284, 73.8743], html: `<div class="marker" style="position:absolute; top:0; left:0;"><div class="marker-blob blue-blob"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M3 9h18" stroke="white" stroke-width="1.5" fill="none"/><circle cx="7.5" cy="15" r="1" fill="white"/><circle cx="16.5" cy="15" r="1" fill="white"/></svg></div><div class="marker-popup">Pune Station</div></div>` },
+      { pos: [18.5905, 73.7388], html: `<div class="marker" style="position:absolute; top:0; left:0;"><div class="marker-pin"><svg width="20" height="24" viewBox="0 0 20 24" fill="none"><path d="M10 0C4.477 0 0 4.477 0 10c0 7.5 10 14 10 14S20 17.5 20 10C20 4.477 15.523 0 10 0z" fill="#ef4444"/><circle cx="10" cy="10" r="4" fill="white"/></svg></div><div class="marker-popup popup-right">Hinjewadi Phase 1</div></div>` }
+    ],
+    cards: [
+      { pos: [18.5413, 73.8282], html: `<div class="map-info-card" style="position:absolute; top:0; left:10px;"><span class="map-card-name metro-name" style="color:#2563eb">6 Routes Available</span><span class="map-card-detail">Tap to compare</span></div>` }
+    ]
+  }
+};
+
+let leafletMap;
+let routeLayerGroup;
+
+function initLeafletMap() {
+  const mapEl = document.getElementById('leaflet-map');
+  if (!mapEl) return;
+  leafletMap = L.map('leaflet-map', { zoomControl: false, attributionControl: false }).setView([18.5595, 73.8065], 13);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    subdomains: 'abcd',
+    maxZoom: 20
+  }).addTo(leafletMap);
+  routeLayerGroup = L.layerGroup().addTo(leafletMap);
+}
+
 function updateMapRoutes(tabId) {
+  if (!leafletMap) initLeafletMap();
+  if (routeLayerGroup) routeLayerGroup.clearLayers();
+
   const map = PANEL_DATA[tabId].map;
-  const svg = document.querySelector('.route-svg');
-  if (!svg) return;
+  const latlngData = LATLNG_DATA[tabId];
+  if (!latlngData) return;
 
-  svg.style.opacity    = '0';
-  svg.style.transition = 'opacity 0.25s ease';
+  // Draw lines
+  latlngData.segments.forEach((seg, i) => {
+    const s = map.segments[i] || map.segments[0];
+    let dashArray = s.dash ? s.dash.split(',').map(n => Number(n) * 5).join(',') : null;
+    let weight = s.width ? s.width * 5 : 5;
 
-  setTimeout(() => {
-    svg.innerHTML = map.segments.map(s => `
-      <path d="${s.d}" stroke="${s.stroke}" stroke-width="${s.width}" fill="none"
-        ${s.dash ? `stroke-dasharray="${s.dash}"` : ''}
-        stroke-linecap="round" stroke-linejoin="round"
-        opacity="${s.opacity !== undefined ? s.opacity : 1}"/>
-    `).join('');
-
-    updateDots(map.dots);
-    updateInfoCards(map.cards);
-    updateEndMarker(map.endPos);
-
-    svg.style.opacity = '1';
-  }, 250);
-}
-
-function updateDots(dots) {
-  document.querySelectorAll('.route-dot').forEach(d => d.remove());
-  const mapEl = document.getElementById('map');
-  if (!mapEl) return;
-  dots.forEach(dot => {
-    const el = document.createElement('div');
-    el.className  = `route-dot ${dot.cls}`;
-    el.style.top  = dot.top;
-    el.style.left = dot.left;
-    mapEl.appendChild(el);
+    L.polyline(seg.latlngs, {
+      color: s.stroke,
+      weight: weight,
+      dashArray: dashArray,
+      opacity: seg.opacity || s.opacity || 1
+    }).addTo(routeLayerGroup);
   });
-}
 
-function updateInfoCards(cards) {
-  document.querySelectorAll('.map-info-card').forEach(c => c.remove());
-  const mapEl = document.getElementById('map');
-  if (!mapEl) return;
-  cards.forEach(card => {
-    const el = document.createElement('div');
-    el.className  = 'map-info-card';
-    el.style.top  = card.top;
-    el.style.left = card.left;
-    el.innerHTML  = `
-      <span class="map-card-name" style="color:${card.color}">${card.name}</span>
-      <span class="map-card-detail">${card.detail}</span>
-    `;
-    mapEl.appendChild(el);
+  // Draw markers
+  latlngData.markers.forEach(m => {
+    let icon;
+    if (m.html) {
+      icon = L.divIcon({ html: m.html, className: '', iconSize: [0, 0] });
+    } else if (m.cls) {
+      icon = L.divIcon({ html: `<div class="${m.cls}" style="position:absolute; top:0; left:0; transform:translate(-50%, -50%);"></div>`, className: '', iconSize: [0, 0] });
+    }
+    if (icon) {
+      L.marker(m.pos, { icon }).addTo(routeLayerGroup);
+    }
   });
-}
 
-function updateEndMarker(pos) {
-  const m = document.querySelector('.marker-end');
-  if (!m) return;
-  m.style.transition = 'top 0.4s ease, left 0.4s ease';
-  m.style.top  = pos.top;
-  m.style.left = pos.left;
+  // Draw cards
+  latlngData.cards.forEach(c => {
+    const icon = L.divIcon({ html: c.html, className: '', iconSize: [0, 0] });
+    L.marker(c.pos, { icon }).addTo(routeLayerGroup);
+  });
+
+  // Fit bounds
+  const allLatLngs = latlngData.segments.flatMap(s => s.latlngs);
+  if (allLatLngs.length > 0) {
+    const bounds = L.latLngBounds(allLatLngs);
+    leafletMap.fitBounds(bounds, { padding: [50, 50] });
+  }
+
+  updateStats(tabId);
 }
 
 function updateStats(tabId) {
-  const s      = PANEL_DATA[tabId].map.stats;
-  const els    = document.querySelectorAll('.stat-value');
+  const s = PANEL_DATA[tabId].map.stats;
+  const els = document.querySelectorAll('.stat-value');
   if (els.length < 4) return;
   [s.fare, s.time, s.transfers, s.distance].forEach((val, i) => {
     const el = els[i];
-    el.style.opacity   = '0';
+    el.style.opacity = '0';
     el.style.transform = 'translateY(5px)';
     el.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
     setTimeout(() => {
-      el.textContent     = val;
-      el.style.opacity   = '1';
+      el.textContent = val;
+      el.style.opacity = '1';
       el.style.transform = 'translateY(0)';
     }, 150 + i * 50);
   });
@@ -483,7 +567,7 @@ function updateStats(tabId) {
 // ============================================================
 function toggleStep(id) {
   const detail = document.getElementById(id);
-  const chev   = document.getElementById('chev-' + id);
+  const chev = document.getElementById('chev-' + id);
   if (!detail) return;
   detail.classList.toggle('open');
   if (chev) chev.classList.toggle('open');
@@ -494,13 +578,13 @@ function toggleStep(id) {
 // ============================================================
 function swapLocations() {
   const from = document.getElementById('from-input');
-  const to   = document.getElementById('to-input');
+  const to = document.getElementById('to-input');
   if (!from || !to) return;
   [from.value, to.value] = [to.value, from.value];
   const btn = document.querySelector('.swap-btn');
   if (btn) {
     btn.style.transition = 'transform 0.3s ease';
-    btn.style.transform  = 'rotate(180deg)';
+    btn.style.transform = 'rotate(180deg)';
     setTimeout(() => { btn.style.transform = 'rotate(0deg)'; }, 320);
   }
 }
@@ -508,22 +592,14 @@ function swapLocations() {
 function toggleTheme() { document.body.classList.toggle('dark'); }
 
 let zoomLevel = 1;
-function zoomIn()  { zoomLevel = Math.min(zoomLevel + 0.15, 2);   applyZoom(); }
-function zoomOut() { zoomLevel = Math.max(zoomLevel - 0.15, 0.6); applyZoom(); }
-function applyZoom() {
-  const bg = document.querySelector('.map-bg');
-  if (!bg) return;
-  bg.style.transition      = 'transform 0.3s ease';
-  bg.style.transformOrigin = 'center center';
-  bg.style.transform       = `scale(${zoomLevel})`;
-}
-
+function zoomIn() { if (leafletMap) leafletMap.zoomIn(); }
+function zoomOut() { if (leafletMap) leafletMap.zoomOut(); }
 function recalculate() {
   const btn = document.querySelector('.btn-recalc');
   if (!btn) return;
   const orig = btn.innerHTML;
   btn.textContent = 'Recalculating...';
-  btn.disabled    = true;
+  btn.disabled = true;
   updateMapRoutes(activeTab);
   setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 1400);
 }
@@ -541,7 +617,7 @@ function startNavigation() {
   if (!btn) return;
   btn.textContent = '⏳ Starting...';
   setTimeout(() => {
-    btn.innerHTML    = `<svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg> Navigating...`;
+    btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg> Navigating...`;
     btn.style.background = 'linear-gradient(135deg,#059669,#0891b2)';
   }, 1000);
 }
@@ -550,11 +626,33 @@ function startNavigation() {
 //  INIT
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
-  // Render default tab (cheapest)
-  renderPanel('cheapest');
-  updateMapRoutes('cheapest');
+  // 1. Read URL Parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const fromQuery = urlParams.get('from');
+  const toQuery = urlParams.get('to');
+  const prefQuery = urlParams.get('pref');
 
-  // Set initial tab button color
-  const firstTab = document.querySelector('.tab[data-tab="cheapest"]');
-  if (firstTab) firstTab.classList.add('tab-active-green');
+  // 2. Populate input fields
+  if (fromQuery) {
+    const fromInput = document.getElementById('from-input');
+    if (fromInput) fromInput.value = decodeURIComponent(fromQuery);
+  }
+  if (toQuery) {
+    const toInput = document.getElementById('to-input');
+    if (toInput) toInput.value = decodeURIComponent(toQuery);
+  }
+
+  // 3. Determine starting tab
+  const prefMap = { 'cheap': 'cheapest', 'fastest': 'fastest', 'comfy': 'comfortable', 'all': 'all' };
+  const initialTabId = prefMap[prefQuery] || 'cheapest';
+
+  // 4. Trigger tab switch
+  const targetTab = document.querySelector(`.tab[data-tab="${initialTabId}"]`);
+  if (targetTab) {
+    switchTab(targetTab, initialTabId);
+  } else {
+    // Fallback if tab element not found
+    renderPanel(initialTabId);
+    updateMapRoutes(initialTabId);
+  }
 });

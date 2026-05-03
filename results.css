@@ -18,9 +18,9 @@
   --text-primary:   #1e293b;
   --text-secondary: #64748b;
   --text-muted:     #94a3b8;
-  --bg-page: linear-gradient(135deg, #eef2ff, #fdf2f8);
- --bg-card: rgba(255, 255, 255, 0.25); /*Made cards more transparent for stronger glass effect*/
- --border: rgba(255, 255, 255, 0.18);  /*Softer, lighter borders to match modern glass UI*/
+  --border:  #e2e8f0;
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
   --navbar-h: 64px;
   --left-w:   540px;
   --font: 'DM Sans', 'Segoe UI', sans-serif;
@@ -31,7 +31,7 @@
 
 body {
   font-family: var(--font);
-  background: linear-gradient(135deg, #eef2ff, #fdf2f8);
+  background: var(--bg-page);
   color: var(--text-primary);
   height: 100vh;
   overflow: hidden;
@@ -42,19 +42,6 @@ body {
 button { font-family: var(--font); cursor: pointer; }
 a { text-decoration: none; }
 input { font-family: var(--font); }
-
-.glass {
-  /*Centralized blur + shadow styling for consistency*/
-  background: var(--bg-card);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-
-  border: 1px solid var(--border);
-
-  box-shadow:
-    0 8px 32px rgba(0,0,0,0.08),
-    inset 0 1px 0 rgba(255,255,255,0.5);
-}
 
 /* ============================================
    NAVBAR
@@ -886,23 +873,9 @@ input { font-family: var(--font); }
    BOTTOM SECTION
 ============================================= */
 .bottom-section {
- flex-shrink: 0;
-/*Lighter transparency + softer shadow*/
-background: rgba(255, 255, 255, 0.2);
-backdrop-filter: blur(24px);
-border-top: 1px solid rgba(255,255,255,0.2);
-box-shadow:
-  0 -10px 30px rgba(0,0,0,0.08),
-  inset 0 1px 0 rgba(255,255,255,0.4);
-}
-
-.glass {
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-
-  box-shadow: 
-    0 10px 30px rgba(0,0,0,0.08),
-    inset 0 1px 0 rgba(255,255,255,0.6);
+  flex-shrink: 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
 }
 
 /* Stats Bar */
@@ -910,24 +883,29 @@ box-shadow:
   display: flex;
   align-items: center;
   padding: 14px 24px;
-
-  background: transparent; /* remove grey */
+  gap: 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .stat-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex: 1;
 }
 
 .stat-icon {
-  background: rgba(255,255,255,0.3);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.3);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-page);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.green-icon { background: var(--purple-light); }
+.green-icon { background: var(--green-light); }
 
 .stat-text {
   display: flex;
@@ -954,15 +932,14 @@ box-shadow:
   background: var(--border);
   flex-shrink: 0;
   margin: 0 20px;
-  opacity: 0.2; /* or remove completely */
 }
 
 /* Action Buttons */
 .action-buttons {
   display: flex;
-  padding: 12px 20px;
-  gap: 12px;
-  width: 100%;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
 }
 
 .btn {
@@ -978,19 +955,20 @@ box-shadow:
 }
 
 .btn-outline {
-  flex: 1; /* equal width */
-  background: rgba(255,255,255,0.4);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.3);
+  flex: 1;
+  border: 1.5px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
 }
 
 .btn-outline:hover { background: var(--bg-page); }
 
 .btn-navigate {
-  flex: 2; /* takes more space */
-  background: linear-gradient(135deg, #7c3aed, #ec4899);
-  box-shadow: 0 6px 20px rgba(124,58,237,0.35); 
+  flex: 2;
+  background: linear-gradient(135deg, #6366f1, #7c3aed);
+  border: none;
   color: white;
+  box-shadow: 0 4px 14px rgba(99,102,241,0.4);
 }
 
 .btn-navigate:hover {

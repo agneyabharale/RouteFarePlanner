@@ -16,26 +16,26 @@ const STAYS = [
 ];
 
 const POPULAR_ROUTES = [
-  { from: 'Mumbai',     to: 'Pune',       modes: ['bus','cab'],         fare: '₹160', time: '2h 45m' },
-  { from: 'Delhi',      to: 'Jaipur',     modes: ['bus','cab'],         fare: '₹220', time: '4h 30m' },
-  { from: 'Bangalore',  to: 'Mysore',     modes: ['bus','cab'],         fare: '₹180', time: '3h 15m' },
-  { from: 'Hyderabad',  to: 'Vijayawada', modes: ['plane','bus'],       fare: '₹250', time: '4h 10m' },
+  { from: 'Mumbai', to: 'Pune', modes: ['bus', 'cab'], fare: '₹160', time: '2h 45m' },
+  { from: 'Delhi', to: 'Jaipur', modes: ['bus', 'cab'], fare: '₹220', time: '4h 30m' },
+  { from: 'Bangalore', to: 'Mysore', modes: ['bus', 'cab'], fare: '₹180', time: '3h 15m' },
+  { from: 'Hyderabad', to: 'Vijayawada', modes: ['plane', 'bus'], fare: '₹250', time: '4h 10m' },
 ];
 
 const RECENT_SEARCHES = [
-  { from: 'Home',          to: 'Office',          when: 'Today, 8:30 AM',     fare: '₹120', time: '35 min' },
-  { from: 'Pune Station',  to: 'Airport',          when: 'Yesterday, 6:45 PM', fare: '₹240', time: '50 min' },
-  { from: 'Wakad',         to: 'Hinjewadi',        when: 'May 12, 4:20 PM',    fare: '₹60',  time: '25 min' },
-  { from: 'Mumbai',        to: 'Lonavala',          when: 'May 10, 9:10 AM',   fare: '₹180', time: '1h 45m' },
-  { from: 'Shivajinagar',  to: 'Baner',             when: 'May 8, 7:30 AM',    fare: '₹40',  time: '20 min' },
+  { from: 'Home', to: 'Office', when: 'Today, 8:30 AM', fare: '₹120', time: '35 min' },
+  { from: 'Pune Station', to: 'Airport', when: 'Yesterday, 6:45 PM', fare: '₹240', time: '50 min' },
+  { from: 'Wakad', to: 'Hinjewadi', when: 'May 12, 4:20 PM', fare: '₹60', time: '25 min' },
+  { from: 'Mumbai', to: 'Lonavala', when: 'May 10, 9:10 AM', fare: '₹180', time: '1h 45m' },
+  { from: 'Shivajinagar', to: 'Baner', when: 'May 8, 7:30 AM', fare: '₹40', time: '20 min' },
 ];
 
 const RECENT_ROUTES = [
-  { modes: ['bus','metro'],  from: 'Wakad',        to: 'Hinjewadi', fare: '₹60',  time: '25 min' },
-  { modes: ['metro','cab'],  from: 'Pune Station', to: 'Airport',   fare: '₹240', time: '50 min' },
-  { modes: ['bus','metro'],  from: 'Home',         to: 'Office',    fare: '₹120', time: '35 min' },
-  { modes: ['green','pink'], from: 'Pune',         to: 'Lonavala',  fare: '₹180', time: '1h 45m' },
-  { modes: ['teal','pink'],  from: 'Baner',        to: 'Aundh',     fare: '₹50',  time: '20 min' },
+  { modes: ['bus', 'metro'], from: 'Wakad', to: 'Hinjewadi', fare: '₹60', time: '25 min' },
+  { modes: ['metro', 'cab'], from: 'Pune Station', to: 'Airport', fare: '₹240', time: '50 min' },
+  { modes: ['bus', 'metro'], from: 'Home', to: 'Office', fare: '₹120', time: '35 min' },
+  { modes: ['green', 'pink'], from: 'Pune', to: 'Lonavala', fare: '₹180', time: '1h 45m' },
+  { modes: ['teal', 'pink'], from: 'Baner', to: 'Aundh', fare: '₹50', time: '20 min' },
 ];
 
 /* ── RENDER HELPERS ── */
@@ -47,7 +47,7 @@ function modeChip(type) {
 }
 
 function modeDot(type) {
-  const cls = { bus:'bus', metro:'metro', cab:'cab', plane:'plane', green:'green', pink:'pink', teal:'teal' };
+  const cls = { bus: 'bus', metro: 'metro', cab: 'cab', plane: 'plane', green: 'green', pink: 'pink', teal: 'teal' };
   return `<span class="mode-dot ${cls[type] || 'bus'}">${modeEmoji[type] || '🚌'}</span>`;
 }
 
@@ -169,7 +169,7 @@ function initPrefs() {
 function initSwap() {
   const btn = document.getElementById('swap-btn');
   const from = document.getElementById('from-input');
-  const to   = document.getElementById('to-input');
+  const to = document.getElementById('to-input');
   if (!btn || !from || !to) return;
 
   btn.addEventListener('click', () => {
@@ -181,17 +181,17 @@ function initSwap() {
 
 /* ── PLAN ROUTE ── */
 function initPlanBtn() {
-  const btn  = document.getElementById('plan-btn');
+  const btn = document.getElementById('plan-btn');
   const from = document.getElementById('from-input');
-  const to   = document.getElementById('to-input');
+  const to = document.getElementById('to-input');
   if (!btn) return;
 
   function shake(el) {
     el.closest('.search-field').style.borderColor = 'rgba(239,68,68,0.5)';
-    el.closest('.search-field').style.boxShadow   = '0 0 0 3px rgba(239,68,68,0.1)';
+    el.closest('.search-field').style.boxShadow = '0 0 0 3px rgba(239,68,68,0.1)';
     setTimeout(() => {
       el.closest('.search-field').style.borderColor = '';
-      el.closest('.search-field').style.boxShadow   = '';
+      el.closest('.search-field').style.boxShadow = '';
     }, 1800);
   }
 
@@ -201,12 +201,15 @@ function initPlanBtn() {
     let valid = true;
 
     if (!f) { shake(from); valid = false; }
-    if (!t) { shake(to);   valid = false; }
+    if (!t) { shake(to); valid = false; }
     if (!valid) return;
 
-    // In production: navigate to route results page
-    // window.location.href = `results.html?from=${encodeURIComponent(f)}&to=${encodeURIComponent(t)}`;
-    alert(`Finding best route from "${f}" to "${t}"…\n\nRoute results page coming next!`);
+    // Get active preference
+    const activePref = document.querySelector('.pref-pill.active');
+    const pref = activePref ? activePref.dataset.pref : 'cheap';
+
+    // Navigate to route results page
+    window.location.href = `results.html?from=${encodeURIComponent(f)}&to=${encodeURIComponent(t)}&pref=${encodeURIComponent(pref)}`;
   });
 }
 

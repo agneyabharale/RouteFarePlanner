@@ -1,0 +1,685 @@
+{
+  "routes": [
+    {
+      "route_id": "BUS_2D",
+      "name": "Shivajinagar → Katraj",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 15,
+      "first_departure": "05:30",
+      "last_departure": "23:00",
+      "total_km": 10.5,
+      "stops_in_order": [
+        "shivajinagar",
+        "swargate",
+        "katraj"
+      ],
+      "source": "data.opencity.in route 2-D"
+    },
+    {
+      "route_id": "BUS_13D",
+      "name": "Shivajinagar → Upper Depot",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 10.0,
+      "stops_in_order": [
+        "shivajinagar",
+        "khadki_bazar",
+        "khadki"
+      ],
+      "source": "data.opencity.in route 13-D"
+    },
+    {
+      "route_id": "BUS_19D",
+      "name": "Shivajinagar → Kondhwa Hospital",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 16.6,
+      "stops_in_order": [
+        "shivajinagar",
+        "pune_station",
+        "swargate",
+        "kondhwa"
+      ],
+      "source": "data.opencity.in route 19-D"
+    },
+    {
+      "route_id": "BUS_26D",
+      "name": "Shivajinagar → Dhankawadi",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 10.2,
+      "stops_in_order": [
+        "shivajinagar",
+        "swargate",
+        "dhankawadi"
+      ],
+      "source": "data.opencity.in route 26-D"
+    },
+    {
+      "route_id": "BUS_27D",
+      "name": "Shivajinagar → Bharati Vidyapeeth",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:00",
+      "total_km": 10.9,
+      "stops_in_order": [
+        "shivajinagar",
+        "deccan_gymkhana",
+        "swargate",
+        "bharati_vidyapeeth"
+      ],
+      "source": "data.opencity.in route 27-D"
+    },
+    {
+      "route_id": "BUS_28D",
+      "name": "Shivajinagar → Katraj (via Deccan)",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 11.1,
+      "stops_in_order": [
+        "shivajinagar",
+        "deccan_gymkhana",
+        "swargate",
+        "katraj"
+      ],
+      "source": "data.opencity.in route 28-D"
+    },
+    {
+      "route_id": "BUS_29D",
+      "name": "Vishrantwadi → Swargate",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 12.6,
+      "stops_in_order": [
+        "vishrantwadi",
+        "pune_station",
+        "shivajinagar",
+        "swargate"
+      ],
+      "source": "data.opencity.in route 29-D"
+    },
+    {
+      "route_id": "BUS_100D",
+      "name": "Hinjawadi → PMPML HQ (Ma Na Pa)",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 30,
+      "first_departure": "06:00",
+      "last_departure": "22:00",
+      "total_km": 26.4,
+      "stops_in_order": [
+        "hinjawadi",
+        "pimplenilakh",
+        "sangvi",
+        "shivajinagar"
+      ],
+      "source": "data.opencity.in route 100-D"
+    },
+    {
+      "route_id": "BUS_115PD",
+      "name": "Hinjawadi → Pune Station",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 30,
+      "first_departure": "06:00",
+      "last_departure": "22:00",
+      "total_km": 29.0,
+      "stops_in_order": [
+        "hinjawadi",
+        "pimplenilakh",
+        "shivajinagar",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 115P-D"
+    },
+    {
+      "route_id": "BUS_116D",
+      "name": "Khadki Bazar → PMPML HQ",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 10.8,
+      "stops_in_order": [
+        "khadki_bazar",
+        "shivajinagar",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 116-D"
+    },
+    {
+      "route_id": "BUS_122D",
+      "name": "Chinchwadgaon → PMPML HQ",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "23:00",
+      "total_km": 18.7,
+      "stops_in_order": [
+        "chinchwadgaon",
+        "dapodi",
+        "bopodi",
+        "khadki_bazar",
+        "shivajinagar",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 122-D"
+    },
+    {
+      "route_id": "BUS_125D",
+      "name": "Dapodi → Bopkhel",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:00",
+      "total_km": 12.7,
+      "stops_in_order": [
+        "dapodi",
+        "khadki_bazar",
+        "bhosari"
+      ],
+      "source": "data.opencity.in route 125-D"
+    },
+    {
+      "route_id": "BUS_129D",
+      "name": "Balewadi Depot → Pune Station",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 18.8,
+      "stops_in_order": [
+        "hinjawadi",
+        "shivajinagar",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 129-D"
+    },
+    {
+      "route_id": "BUS_130D",
+      "name": "Shivajinagar → Yewalewadi",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:00",
+      "total_km": 16.1,
+      "stops_in_order": [
+        "shivajinagar",
+        "swargate",
+        "katraj",
+        "yewalewadi"
+      ],
+      "source": "data.opencity.in route 130-D"
+    },
+    {
+      "route_id": "BUS_154D",
+      "name": "Vishrantwadi → Pune Station",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 15,
+      "first_departure": "05:30",
+      "last_departure": "23:00",
+      "total_km": 8.5,
+      "stops_in_order": [
+        "vishrantwadi",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 154-D"
+    },
+    {
+      "route_id": "BUS_164D",
+      "name": "Viman Nagar → Swargate",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 15.5,
+      "stops_in_order": [
+        "vimannagar",
+        "pune_station",
+        "swargate"
+      ],
+      "source": "data.opencity.in route 164-D"
+    },
+    {
+      "route_id": "BUS_166D",
+      "name": "Viman Nagar → Pune Station",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 15,
+      "first_departure": "05:30",
+      "last_departure": "23:00",
+      "total_km": 9.5,
+      "stops_in_order": [
+        "vimannagar",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 166-D"
+    },
+    {
+      "route_id": "BUS_175D",
+      "name": "Hadapsar → PMPML HQ",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 16.0,
+      "stops_in_order": [
+        "hadapsar",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 175-D"
+    },
+    {
+      "route_id": "BUS_196D",
+      "name": "Hadapsar → Pune Station",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 15,
+      "first_departure": "05:30",
+      "last_departure": "23:00",
+      "total_km": 12.4,
+      "stops_in_order": [
+        "hadapsar",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 196-D"
+    },
+    {
+      "route_id": "BUS_184AD",
+      "name": "Bhekrai Nagar → Swargate",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 12.1,
+      "stops_in_order": [
+        "bhekrainagar",
+        "hadapsar",
+        "swargate"
+      ],
+      "source": "data.opencity.in route 184A-D"
+    },
+    {
+      "route_id": "BUS_303D",
+      "name": "Akurdi Railway Stn → Nigdi",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 6.2,
+      "stops_in_order": [
+        "akurdi",
+        "pcmc_bhavan",
+        "nigdi"
+      ],
+      "source": "data.opencity.in route 303-D"
+    },
+    {
+      "route_id": "BUS_311D",
+      "name": "Pimpri Gaon → Pune Station",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 15,
+      "first_departure": "05:30",
+      "last_departure": "23:00",
+      "total_km": 21.8,
+      "stops_in_order": [
+        "pimprigaon",
+        "chinchwad_bus",
+        "pcmc_bhavan",
+        "dapodi",
+        "shivajinagar",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 311-D"
+    },
+    {
+      "route_id": "BUS_312D",
+      "name": "Chinchwadgaon → Pune Station",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 15,
+      "first_departure": "05:30",
+      "last_departure": "23:00",
+      "total_km": 22.5,
+      "stops_in_order": [
+        "chinchwadgaon",
+        "pcmc_bhavan",
+        "dapodi",
+        "bopodi",
+        "shivajinagar",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 312-D"
+    },
+    {
+      "route_id": "BUS_317D",
+      "name": "Sambhaji Nagar → Pune Station",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 23.7,
+      "stops_in_order": [
+        "sambhajinagar_bus",
+        "dapodi",
+        "bopodi",
+        "shivajinagar",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 317-D"
+    },
+    {
+      "route_id": "BUS_322KD",
+      "name": "Akurdi Rly Stn → PMPML HQ",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 23.5,
+      "stops_in_order": [
+        "akurdi",
+        "chinchwad_bus",
+        "pcmc_bhavan",
+        "dapodi",
+        "shivajinagar",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 322K-D"
+    },
+    {
+      "route_id": "BUS_332D",
+      "name": "Pimpri → Pune Station",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 15,
+      "first_departure": "05:30",
+      "last_departure": "23:00",
+      "total_km": 26.4,
+      "stops_in_order": [
+        "pimpri_bus",
+        "pimprigaon",
+        "chinchwad_bus",
+        "pcmc_bhavan",
+        "shivajinagar",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 332-D"
+    },
+    {
+      "route_id": "BUS_333D",
+      "name": "Hinjawadi → Pune Station",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 30,
+      "first_departure": "06:00",
+      "last_departure": "22:00",
+      "total_km": 26.6,
+      "stops_in_order": [
+        "hinjawadi",
+        "pcmc_bhavan",
+        "shivajinagar",
+        "pune_station"
+      ],
+      "source": "data.opencity.in route 333-D"
+    },
+    {
+      "route_id": "BUS_20D",
+      "name": "Pune Station → Sahkar Nagar",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 15,
+      "first_departure": "05:30",
+      "last_departure": "23:00",
+      "total_km": 9.5,
+      "stops_in_order": [
+        "pune_station",
+        "swargate",
+        "sahkarnagar"
+      ],
+      "source": "data.opencity.in route 20-D"
+    },
+    {
+      "route_id": "BUS_213D",
+      "name": "Viman Nagar → Katraj",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:00",
+      "total_km": 21.9,
+      "stops_in_order": [
+        "vimannagar",
+        "pune_station",
+        "swargate",
+        "katraj"
+      ],
+      "source": "data.opencity.in route 213-D"
+    },
+    {
+      "route_id": "BUS_276D",
+      "name": "Chinchwadgaon → Warje Malwadi",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 30,
+      "first_departure": "06:00",
+      "last_departure": "22:00",
+      "total_km": 24.9,
+      "stops_in_order": [
+        "chinchwadgaon",
+        "shivajinagar",
+        "swargate",
+        "warje"
+      ],
+      "source": "data.opencity.in route 276-D"
+    },
+    {
+      "route_id": "BUS_230D",
+      "name": "Pune Station → Bharati Vidyapeeth",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 10.9,
+      "stops_in_order": [
+        "pune_station",
+        "deccan_gymkhana",
+        "bharati_vidyapeeth"
+      ],
+      "source": "data.opencity.in route 230-D"
+    },
+    {
+      "route_id": "BUS_202D",
+      "name": "Warje Malwadi → Hadapsar",
+      "mode": "bus",
+      "operator": "PMPML",
+      "ac": false,
+      "comfort_score": 5,
+      "frequency_min": 20,
+      "first_departure": "05:30",
+      "last_departure": "22:30",
+      "total_km": 19.2,
+      "stops_in_order": [
+        "warje",
+        "swargate",
+        "hadapsar"
+      ],
+      "source": "data.opencity.in route 202-D"
+    },
+    {
+      "route_id": "METRO_PURPLE",
+      "name": "Purple Line – PCMC Bhavan to Swargate",
+      "mode": "metro",
+      "operator": "MahaMetro",
+      "ac": true,
+      "comfort_score": 9,
+      "frequency_min": 7,
+      "first_departure": "06:00",
+      "last_departure": "23:00",
+      "total_km": 16.59,
+      "stops_in_order": [
+        "metro_pcmc",
+        "metro_sant_tukaram",
+        "metro_bhosari",
+        "metro_kasarwadi",
+        "metro_fugewadi",
+        "metro_dapodi",
+        "metro_bopodi",
+        "metro_khadki",
+        "metro_range_hills",
+        "metro_shivajinagar",
+        "metro_civil_court_p",
+        "metro_kasba_peth",
+        "metro_mandai",
+        "metro_swargate"
+      ],
+      "source": "punemetrorail.org — operational Sep 2024"
+    },
+    {
+      "route_id": "METRO_AQUA",
+      "name": "Aqua Line – Vanaz to Ramwadi",
+      "mode": "metro",
+      "operator": "MahaMetro",
+      "ac": true,
+      "comfort_score": 9,
+      "frequency_min": 7,
+      "first_departure": "06:00",
+      "last_departure": "23:00",
+      "total_km": 14.66,
+      "stops_in_order": [
+        "metro_vanaz",
+        "metro_anand_nagar",
+        "metro_ideal_colony",
+        "metro_nal_stop",
+        "metro_garware",
+        "metro_deccan",
+        "metro_sambhaji",
+        "metro_pmc",
+        "metro_civil_court_a",
+        "metro_mangalwar",
+        "metro_pune_stn",
+        "metro_ruby_hall",
+        "metro_bund_garden",
+        "metro_yerawada",
+        "metro_kalyani_nagar",
+        "metro_ramwadi"
+      ],
+      "source": "punemetrorail.org — operational Mar 2024"
+    },
+    {
+      "route_id": "TRAIN_PUNE_LOCAL",
+      "name": "Pune Local – Akurdi to Pune Junction",
+      "mode": "train",
+      "operator": "Indian Railways",
+      "ac": false,
+      "comfort_score": 7,
+      "frequency_min": 20,
+      "first_departure": "05:00",
+      "last_departure": "23:30",
+      "total_km": 28.0,
+      "stops_in_order": [
+        "train_akurdi",
+        "train_chinchwad",
+        "train_pcmc",
+        "train_range_hills",
+        "train_khadki",
+        "train_shivajinagar",
+        "train_pune_jn"
+      ],
+      "source": "Indian Railways Pune Division timetable"
+    }
+  ]
+}

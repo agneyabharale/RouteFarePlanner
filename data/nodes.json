@@ -1,0 +1,680 @@
+{
+  "nodes": [
+    {
+      "id": "pcmc_bhavan",
+      "name": "PCMC Bhavan",
+      "type": "interchange",
+      "interchange": true,
+      "lat": 18.6298,
+      "lng": 73.7997,
+      "networks": [
+        "bus",
+        "metro_purple"
+      ]
+    },
+    {
+      "id": "shivajinagar",
+      "name": "Shivaji Nagar",
+      "type": "interchange",
+      "interchange": true,
+      "lat": 18.5308,
+      "lng": 73.8474,
+      "networks": [
+        "bus",
+        "metro_purple",
+        "metro_aqua"
+      ]
+    },
+    {
+      "id": "civil_court",
+      "name": "Civil Court",
+      "type": "interchange",
+      "interchange": true,
+      "lat": 18.5167,
+      "lng": 73.8563,
+      "networks": [
+        "metro_purple",
+        "metro_aqua"
+      ]
+    },
+    {
+      "id": "pune_station",
+      "name": "Pune Railway Station",
+      "type": "interchange",
+      "interchange": true,
+      "lat": 18.5285,
+      "lng": 73.8742,
+      "networks": [
+        "bus",
+        "metro_aqua",
+        "local_train"
+      ]
+    },
+    {
+      "id": "swargate",
+      "name": "Swargate",
+      "type": "interchange",
+      "interchange": true,
+      "lat": 18.5013,
+      "lng": 73.8618,
+      "networks": [
+        "bus",
+        "metro_purple"
+      ]
+    },
+    {
+      "id": "dapodi",
+      "name": "Dapodi",
+      "type": "interchange",
+      "interchange": true,
+      "lat": 18.6201,
+      "lng": 73.8101,
+      "networks": [
+        "bus",
+        "metro_purple"
+      ]
+    },
+    {
+      "id": "khadki",
+      "name": "Khadki",
+      "type": "interchange",
+      "interchange": true,
+      "lat": 18.571,
+      "lng": 73.8432,
+      "networks": [
+        "bus",
+        "metro_purple",
+        "local_train"
+      ]
+    },
+    {
+      "id": "deccan_gymkhana",
+      "name": "Deccan Gymkhana",
+      "type": "interchange",
+      "interchange": true,
+      "lat": 18.5176,
+      "lng": 73.8414,
+      "networks": [
+        "bus",
+        "metro_aqua"
+      ]
+    },
+    {
+      "id": "akurdi",
+      "name": "Akurdi",
+      "type": "interchange",
+      "interchange": true,
+      "lat": 18.6484,
+      "lng": 73.7654,
+      "networks": [
+        "bus",
+        "local_train"
+      ]
+    },
+    {
+      "id": "metro_pcmc",
+      "name": "PCMC (Metro)",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.6298,
+      "lng": 73.7997,
+      "line": "purple"
+    },
+    {
+      "id": "metro_sant_tukaram",
+      "name": "Sant Tukaram Nagar",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.6352,
+      "lng": 73.8015,
+      "line": "purple"
+    },
+    {
+      "id": "metro_bhosari",
+      "name": "Bhosari (Nashik Phata)",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.6401,
+      "lng": 73.8098,
+      "line": "purple"
+    },
+    {
+      "id": "metro_kasarwadi",
+      "name": "Kasarwadi",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.6301,
+      "lng": 73.8143,
+      "line": "purple"
+    },
+    {
+      "id": "metro_fugewadi",
+      "name": "Fugewadi",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.6251,
+      "lng": 73.8165,
+      "line": "purple"
+    },
+    {
+      "id": "metro_dapodi",
+      "name": "Dapodi (Metro)",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.6201,
+      "lng": 73.8101,
+      "line": "purple"
+    },
+    {
+      "id": "metro_bopodi",
+      "name": "Bopodi",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.6089,
+      "lng": 73.8178,
+      "line": "purple"
+    },
+    {
+      "id": "metro_khadki",
+      "name": "Khadki (Metro)",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.582,
+      "lng": 73.839,
+      "line": "purple"
+    },
+    {
+      "id": "metro_range_hills",
+      "name": "Range Hills",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.571,
+      "lng": 73.8432,
+      "line": "purple"
+    },
+    {
+      "id": "metro_shivajinagar",
+      "name": "Shivaji Nagar (Metro)",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5308,
+      "lng": 73.8474,
+      "line": "purple"
+    },
+    {
+      "id": "metro_civil_court_p",
+      "name": "Civil Court (Purple)",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5167,
+      "lng": 73.8563,
+      "line": "purple"
+    },
+    {
+      "id": "metro_kasba_peth",
+      "name": "Kasba Peth",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5107,
+      "lng": 73.858,
+      "line": "purple"
+    },
+    {
+      "id": "metro_mandai",
+      "name": "Mandai",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5067,
+      "lng": 73.8596,
+      "line": "purple"
+    },
+    {
+      "id": "metro_swargate",
+      "name": "Swargate (Metro)",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5013,
+      "lng": 73.8618,
+      "line": "purple"
+    },
+    {
+      "id": "metro_vanaz",
+      "name": "Vanaz",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.498,
+      "lng": 73.8071,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_anand_nagar",
+      "name": "Anand Nagar",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5022,
+      "lng": 73.8121,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_ideal_colony",
+      "name": "Ideal Colony",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5068,
+      "lng": 73.8182,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_nal_stop",
+      "name": "Nal Stop",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5112,
+      "lng": 73.8244,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_garware",
+      "name": "Garware College",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5158,
+      "lng": 73.8298,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_deccan",
+      "name": "Deccan Gymkhana (Metro)",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5176,
+      "lng": 73.8414,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_sambhaji",
+      "name": "Chhatrapati Sambhaji Udyan",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.519,
+      "lng": 73.8482,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_pmc",
+      "name": "PMC",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5198,
+      "lng": 73.8545,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_civil_court_a",
+      "name": "Civil Court (Aqua)",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5167,
+      "lng": 73.8563,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_mangalwar",
+      "name": "Mangalwar Peth",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5175,
+      "lng": 73.8634,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_pune_stn",
+      "name": "Pune Railway Station (Metro)",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5285,
+      "lng": 73.8742,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_ruby_hall",
+      "name": "Ruby Hall Clinic",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5355,
+      "lng": 73.8862,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_bund_garden",
+      "name": "Bund Garden",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5404,
+      "lng": 73.8921,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_yerawada",
+      "name": "Yerawada",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5471,
+      "lng": 73.8985,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_kalyani_nagar",
+      "name": "Kalyani Nagar",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.552,
+      "lng": 73.9043,
+      "line": "aqua"
+    },
+    {
+      "id": "metro_ramwadi",
+      "name": "Ramwadi",
+      "type": "metro_station",
+      "interchange": false,
+      "lat": 18.5564,
+      "lng": 73.9101,
+      "line": "aqua"
+    },
+    {
+      "id": "train_akurdi",
+      "name": "Akurdi (Train)",
+      "type": "train_station",
+      "interchange": false,
+      "lat": 18.6484,
+      "lng": 73.7654,
+      "line": "pune_local"
+    },
+    {
+      "id": "train_chinchwad",
+      "name": "Chinchwad (Train)",
+      "type": "train_station",
+      "interchange": false,
+      "lat": 18.6414,
+      "lng": 73.7795,
+      "line": "pune_local"
+    },
+    {
+      "id": "train_pcmc",
+      "name": "Pimpri (Train)",
+      "type": "train_station",
+      "interchange": false,
+      "lat": 18.6298,
+      "lng": 73.7997,
+      "line": "pune_local"
+    },
+    {
+      "id": "train_range_hills",
+      "name": "Range Hills (Train)",
+      "type": "train_station",
+      "interchange": false,
+      "lat": 18.5821,
+      "lng": 73.8381,
+      "line": "pune_local"
+    },
+    {
+      "id": "train_khadki",
+      "name": "Khadki (Train)",
+      "type": "train_station",
+      "interchange": false,
+      "lat": 18.571,
+      "lng": 73.8432,
+      "line": "pune_local"
+    },
+    {
+      "id": "train_shivajinagar",
+      "name": "Shivajinagar (Train)",
+      "type": "train_station",
+      "interchange": false,
+      "lat": 18.5308,
+      "lng": 73.8474,
+      "line": "pune_local"
+    },
+    {
+      "id": "train_pune_jn",
+      "name": "Pune Junction",
+      "type": "train_station",
+      "interchange": false,
+      "lat": 18.5285,
+      "lng": 73.8742,
+      "line": "pune_local"
+    },
+    {
+      "id": "pimprigaon",
+      "name": "Pimpri Gaon",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.6279,
+      "lng": 73.7982
+    },
+    {
+      "id": "chinchwadgaon",
+      "name": "Chinchwadgaon",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.6181,
+      "lng": 73.8047
+    },
+    {
+      "id": "nigdi",
+      "name": "Nigdi",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.6488,
+      "lng": 73.7692
+    },
+    {
+      "id": "bhosari",
+      "name": "Bhosari",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.6401,
+      "lng": 73.8098
+    },
+    {
+      "id": "alandi",
+      "name": "Alandi",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.6731,
+      "lng": 73.8973
+    },
+    {
+      "id": "vishrantwadi",
+      "name": "Vishrantwadi",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.5677,
+      "lng": 73.9012
+    },
+    {
+      "id": "vimannagar",
+      "name": "Viman Nagar",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.5675,
+      "lng": 73.9146
+    },
+    {
+      "id": "kharadi",
+      "name": "Kharadi",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.5512,
+      "lng": 73.949
+    },
+    {
+      "id": "hadapsar",
+      "name": "Hadapsar",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.5089,
+      "lng": 73.9261
+    },
+    {
+      "id": "bhekrainagar",
+      "name": "Bhekrai Nagar",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.4912,
+      "lng": 73.9384
+    },
+    {
+      "id": "katraj",
+      "name": "Katraj",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.4528,
+      "lng": 73.8685
+    },
+    {
+      "id": "yewalewadi",
+      "name": "Yewalewadi",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.443,
+      "lng": 73.888
+    },
+    {
+      "id": "sahkarnagar",
+      "name": "Sahkar Nagar",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.4882,
+      "lng": 73.8557
+    },
+    {
+      "id": "kondhwa",
+      "name": "Kondhwa",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.468,
+      "lng": 73.8902
+    },
+    {
+      "id": "dhankawadi",
+      "name": "Dhankawadi",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.47,
+      "lng": 73.8648
+    },
+    {
+      "id": "bharati_vidyapeeth",
+      "name": "Bharati Vidyapeeth",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.463,
+      "lng": 73.8269
+    },
+    {
+      "id": "warje",
+      "name": "Warje Malwadi",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.4987,
+      "lng": 73.8136
+    },
+    {
+      "id": "kothrud",
+      "name": "Kothrud Depot",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.5041,
+      "lng": 73.8127
+    },
+    {
+      "id": "hinjawadi",
+      "name": "Hinjawadi Phase 3",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.5912,
+      "lng": 73.7378
+    },
+    {
+      "id": "bopodi",
+      "name": "Bopodi",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.6089,
+      "lng": 73.8178
+    },
+    {
+      "id": "khadki_bazar",
+      "name": "Khadki Bazar",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.5749,
+      "lng": 73.8445
+    },
+    {
+      "id": "pimplenilakh",
+      "name": "Pimple Nilakh",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.582,
+      "lng": 73.7932
+    },
+    {
+      "id": "sangvi",
+      "name": "Vasantdada Putala Sangvi",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.5779,
+      "lng": 73.8178
+    },
+    {
+      "id": "marketyard",
+      "name": "Market Yard",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.4981,
+      "lng": 73.864
+    },
+    {
+      "id": "lohgaon",
+      "name": "Lohgaon",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.5812,
+      "lng": 73.9148
+    },
+    {
+      "id": "bhakti_shakti",
+      "name": "Bhakti Shakti",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.6512,
+      "lng": 73.8089
+    },
+    {
+      "id": "chinchwad_bus",
+      "name": "Chinchwad",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.6414,
+      "lng": 73.7795
+    },
+    {
+      "id": "pimpri_bus",
+      "name": "Pimpri",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.6279,
+      "lng": 73.7982
+    },
+    {
+      "id": "sambhajinagar_bus",
+      "name": "Sambhaji Nagar",
+      "type": "bus_stop",
+      "interchange": false,
+      "lat": 18.635,
+      "lng": 73.832
+    }
+  ]
+}

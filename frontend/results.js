@@ -11,6 +11,7 @@ const ICONS = {
   cab: `<svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M5 11l2-5h10l2 5"/><rect x="3" y="11" width="18" height="7" rx="2"/><circle cx="7.5" cy="18" r="2" fill="white"/><circle cx="16.5" cy="18" r="2" fill="white"/></svg>`,
   transfer: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2"><path d="M16 3h5v5M4 21h5v-5M21 3l-7 7M3 21l7-7"/></svg>`,
   info: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>`,
+  train: `<svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M7 15h10M7 11h10M6 5h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM9 19l-2 2M15 19l2 2" stroke="white" stroke-width="1.5" fill="none"/></svg>`,
 };
 
 let ROUTES_DATA = {
@@ -146,7 +147,7 @@ function buildExpandedCard(tabId, data) {
 }
 
 function buildStepRow(leg, index, totalLegs) {
-  const iconType = leg.mode === 'transfer' ? 'transfer' : (leg.mode === 'metro' ? 'metro' : (leg.mode === 'cab' ? 'cab' : 'bus'));
+  const iconType = leg.mode === 'transfer' ? 'transfer' : (leg.mode === 'metro' ? 'metro' : (leg.mode === 'cab' ? 'cab' : (leg.mode === 'train' ? 'train' : 'bus')));
   const hasLine = index < totalLegs - 1;
   const instruction = getInstruction(leg);
 
@@ -180,6 +181,7 @@ function getInstruction(leg) {
     if (leg.mode === 'bus') return `Take <span style="color:#16a34a; font-weight:600">Bus ${leg.route_name || leg.route_id || ''}</span> from ${from} to ${to}`;
     if (leg.mode === 'metro') return `Take <span style="color:#2563eb; font-weight:600">Metro ${leg.route_name || ''}</span> from ${from} to ${to}`;
     if (leg.mode === 'cab') return `Take <span style="color:#d97706; font-weight:600">Cab / Auto</span> from ${from} to ${to}`;
+    if (leg.mode === 'train') return `Take <span style="color:#6366f1; font-weight:600">Local Train</span> from ${from} to ${to}`;
     return `Travel from ${from} to ${to} via ${leg.mode}`;
 }
 

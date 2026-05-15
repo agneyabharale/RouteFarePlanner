@@ -24,6 +24,7 @@ def calculate_route(request_data: RouteRequest, request: Request):
     w_func = weight_map.get(request_data.preference, weight_time)
 
     def resolve_node(query: str, nodes_dict: dict) -> str:
+        query = query.strip()
         if query in nodes_dict:
             return query
         q_low = query.lower()

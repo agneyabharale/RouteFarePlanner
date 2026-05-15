@@ -449,6 +449,7 @@ input { font-family: var(--font); }
 .metro-circle { background: var(--blue);  }
 .walk-circle  { background: #f1f5f9; border: 1.5px solid #cbd5e1; }
 .cab-circle   { background: var(--amber); }
+.train-circle { background: #6366f1; }
 
 .step-line {
   width: 2px;
@@ -460,6 +461,7 @@ input { font-family: var(--font); }
 
 .bus-line   { background: var(--green); }
 .metro-line { background: var(--blue); }
+.train-line { background: #6366f1; }
 .walk-line  {
   background: repeating-linear-gradient(to bottom, #9ca3af 0, #9ca3af 4px, transparent 4px, transparent 8px);
   opacity: 0.6;

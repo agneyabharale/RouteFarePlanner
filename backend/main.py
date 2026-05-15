@@ -2,10 +2,11 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import uvicorn
 
-from config import settings
-from data.loader import load_all
-from routers import health, route, fare, stops
+from backend.config import settings
+from backend.data.loader import load_all
+from backend.routers import health, route, fare, stops
 
 
 @asynccontextmanager
@@ -50,7 +51,7 @@ app.include_router(stops.router)
 if __name__ == "__main__":
     # This allows you to run 'python main.py' directly
     uvicorn.run(
-        "main:app", 
+        "backend.main:app", 
         host="0.0.0.0", 
         port=8000, 
         reload=True  # Set to False in production

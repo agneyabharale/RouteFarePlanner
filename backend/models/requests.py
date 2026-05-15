@@ -19,7 +19,7 @@ class RouteRequest(BaseModel):
     @classmethod
     def slugify(cls, v: str) -> str:
         """Lowercase and strip whitespace so 'PCMC Bhavan' still works."""
-        return v.strip().lower().replace(" ", "_")
+        return v.strip().lower()
 
     @model_validator(mode="after")
     def start_ne_end(self) -> "RouteRequest":

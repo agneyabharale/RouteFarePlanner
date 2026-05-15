@@ -222,4 +222,63 @@ document.addEventListener('DOMContentLoaded', () => {
   initPrefs();
   initSwap();
   initPlanBtn();
+  initAutocomplete('from-input', 'from-autocomplete');
+  initAutocomplete('to-input', 'to-autocomplete');
 });
+
+/* ── AUTOCOMPLETE LOGIC ── */
+function initAutocomplete(inputId, dropdownId) {
+  const input = document.getElementById(inputId);
+  const dropdown = document.getElementById(dropdownId);
+  if (!input || !dropdown) return;
+
+  let debounceTimer;
+
+  input.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    const query = input.value.trim();
+
+    if (query.length < 2) {
+      dropdown.style.display = 'none';
+      return;
+    }
+
+    debounceTimer = setTimeout(async () => {
+      try {
+        const res = await fetch(`http://localhost:8000/stops/search?q=${encodeURIComponent(query)}&limit=8`);
+        const data = await res.json();
+
+        if (data.results && data.results.length > 0) {
+          renderAutocomplete(data.results, dropdown, input);
+        } else {
+          dropdown.style.display = 'none';
+        }
+      } catch (err) {
+        console.error('Autocomplete error:', err);
+      }
+    }, 300);
+  });
+
+  input.addEventListener('blur', () => {
+    setTimeout(() => { dropdown.style.display = 'none'; }, 200);
+  });
+}
+
+function renderAutocomplete(results, dropdown, input) {
+  dropdown.innerHTML = results.map(stop => `
+    <div class="autocomplete-item" data-id="${stop.id}" data-name="${stop.name}">
+      <span class="name">${stop.name}</span>
+      <span class="type">${stop.type.replace('_', ' ')}</span>
+    </div>
+  `).join('');
+
+  dropdown.style.display = 'block';
+
+  dropdown.querySelectorAll('.autocomplete-item').forEach(item => {
+    item.addEventListener('click', () => {
+      input.value = item.dataset.name;
+      input.dataset.selectedId = item.dataset.id;
+      dropdown.style.display = 'none';
+    });
+  });
+}

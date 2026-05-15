@@ -23,10 +23,22 @@ def calculate_route(request_data: RouteRequest, request: Request):
     }
     w_func = weight_map.get(request_data.preference, weight_time)
 
+    def resolve_node(query: str, nodes_dict: dict) -> str:
+        if query in nodes_dict:
+            return query
+        q_low = query.lower()
+        for nid, ndata in nodes_dict.items():
+            if ndata.get("name", "").lower() == q_low:
+                return nid
+        return query
+
+    start_id = resolve_node(request_data.start, nodes)
+    end_id   = resolve_node(request_data.end, nodes)
+
     path_result = find_path(
         graph=graph,
-        start=request_data.start,
-        end=request_data.end,
+        start=start_id,
+        end=end_id,
         weight_func=w_func,
     )
 
